@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.facebook.android:facebook-marketing:5.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.1.1.aar/e1d27f4ce0355974f33431a529354862/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.1.1.aar/e1d27f4ce0355974f33431a529354862/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.1.1.aar/c62ebfe54c9dfdd30b9f7edd7f673afd/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-facebook-marketing-5.1.1.aar/46934131c339016bfc27b7db6776e2aa/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-facebook-marketing-5.1.1.aar/46934131c339016bfc27b7db6776e2aa/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-facebook-marketing-5.1.1.aar/46934131c339016bfc27b7db6776e2aa/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-marketing/5.1.1/4187fa0d579156ddc349e618697f0cd75721f560/facebook-marketing-5.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-marketing/5.1.1/e5222901a97ad2879e0104871b2266c0efdce918/facebook-marketing-5.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

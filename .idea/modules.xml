@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Su-Drives-Partner-develop_shashank.iml" filepath="$PROJECT_DIR$/.idea/modules/Su-Drives-Partner-develop_shashank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Su-Drives-Partner-develop_shashank.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Su-Drives-Partner-develop_shashank.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/Su-Drives-Partner-develop_shashank.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/Su-Drives-Partner-develop_shashank.library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+    </modules>
+  </component>
+</project>

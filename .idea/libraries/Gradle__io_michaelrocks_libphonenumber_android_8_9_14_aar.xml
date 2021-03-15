@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: io.michaelrocks:libphonenumber-android:8.9.14@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libphonenumber-android-8.9.14.aar/fd9f9ea6bd9c7f4a3a1c915fa7f34927/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libphonenumber-android-8.9.14.aar/fd9f9ea6bd9c7f4a3a1c915fa7f34927/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libphonenumber-android-8.9.14.aar/e0cf66d43ae747dc4f222bc2ca24d16b/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libphonenumber-android-8.9.14.aar/e0cf66d43ae747dc4f222bc2ca24d16b/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libphonenumber-android-8.9.14.aar/e0cf66d43ae747dc4f222bc2ca24d16b/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.michaelrocks/libphonenumber-android/8.9.14/9cc9d2e70f7848fc7ac6bc16311e983bfcf5c0fc/libphonenumber-android-8.9.14-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.michaelrocks/libphonenumber-android/8.9.14/6ebc1e03fae593fdf917219916ef0afe205b477f/libphonenumber-android-8.9.14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
