@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_booking_accepted_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:contentPadding="@dimen/padding_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll_pickup_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal">
+
+
+
+                <ImageView
+                    android:id="@+id/iv_IHA_pickup_location"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:src="@drawable/red_circle" />
+
+
+                <TextView
+                    android:id="@+id/tv_booking_accepted_top_pickup_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+
+                    android:layout_gravity="center"
+                    android:hint="@string/pickup_location"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="1dp"
+                android:background="@color/quantum_grey"/>
+
+            <LinearLayout
+                android:id="@+id/ll_Drop_Off_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_drop_Off_location"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:src="@drawable/green_circle"/>
+
+
+                <TextView
+                    android:id="@+id/tv_booking_accepted_top_Drop_Off_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="@string/drop_off_location"
+                    android:padding="@dimen/padding_5"
+                    android:fontFamily="@font/montserrat_semibold"
+
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+

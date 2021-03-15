@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_20"
+    android:background="@drawable/rectngular_white_bg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/accept"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/green_button"
+        android:layout_marginTop="@dimen/margin_30"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/below_text"
+        android:text="@string/payment_has_been_made_by_the_passenger_click_ok_to_continue_time_of_ride"
+        android:layout_below="@id/green_button"
+        android:layout_marginTop="@dimen/margin_20"
+        android:textSize="@dimen/text_16"
+        android:fontFamily="@font/proximanova_regular"
+        android:textColor="@color/text_color"
+        android:gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_ok"
+        android:background="@drawable/rounded_corner_shape_primary"
+        android:layout_below="@+id/below_text"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ok"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/proximanova_regular"
+        android:textSize="@dimen/text_18"
+        />
+
+</RelativeLayout>

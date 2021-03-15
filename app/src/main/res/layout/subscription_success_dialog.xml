@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_success"
+        android:gravity="center"
+        android:background="#FBFBFB"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_height="@dimen/_100sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:id="@+id/iv_succ"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:src="@drawable/success"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_textSuccess"
+            android:text="Payment Success"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_semibold"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_fail"
+        android:gravity="center"
+        android:background="#FBFBFB"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_height="@dimen/_100sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:id="@+id/iv_fail"
+            android:layout_gravity="center"
+            android:src="@drawable/errror"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_textFailed"
+            android:text="Payment Failed"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_semibold"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20">
+
+            <RelativeLayout
+                android:id="@+id/earned_money_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:text="Earned Money"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_20" />
+
+                <TextView
+                    android:id="@+id/total_amount_earned_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:text="4500"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_20" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/account_details_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/earned_money_rv"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:text="Account Details"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/text_20" />
+
+                    <ImageView
+                        android:id="@+id/edit_account_details"
+                        android:layout_width="@dimen/margin_30"
+                        android:layout_height="@dimen/margin_30"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/margin_5"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/account_details_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account_details_lv"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/account_holder_name_ev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Account Holder Name" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bank_name_ev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bank Name" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bank_ifsc_ev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ifsc Code" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/account_number_ev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Account Number" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/claim_money_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account_details_view"
+                android:layout_marginTop="@dimen/margin_20"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:text="Claim Money"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/text_20" />
+
+                    <ImageView
+                        android:id="@+id/edit_claim_money"
+                        android:layout_width="@dimen/margin_30"
+                        android:layout_height="@dimen/margin_30"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/margin_5"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/claim_money_ev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Amount"
+                    android:inputType="number" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/save_account_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginEnd="@dimen/margin_30"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:background="@drawable/btn_primary"
+        android:text="Claim Money"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+
+    <!-- <com.google.android.material.appbar.AppBarLayout
+         android:id="@+id/appbar"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:backgroundTint="@color/white"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHeight_percent="0.070"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <androidx.appcompat.widget.Toolbar
+             android:id="@+id/toolbar_claim"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             app:title="Earned Money" />
+
+     </com.google.android.material.appbar.AppBarLayout>
+
+     <androidx.core.widget.NestedScrollView
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         app:layout_constraintHeight_percent="0.93"
+         app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/cons_earned"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@color/white"
+                 android:padding="10dp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
+
+                 <TextView
+                     android:id="@+id/tv_claim"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="10dp"
+                     android:layout_marginEnd="10dp"
+                     android:text="Diamonds to be claimed"
+                     android:textColor="@color/black"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
+
+                 <ImageView
+                     android:id="@+id/iv_diamonds"
+                     android:layout_width="20dp"
+                     android:layout_height="20dp"
+                     android:layout_marginStart="10dp"
+                     android:layout_marginEnd="10dp"
+
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toStartOf="@+id/tv_claimed_diamonds"
+                     app:layout_constraintTop_toTopOf="parent" />
+
+                 <TextView
+                     android:id="@+id/tv_claimed_diamonds"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="10dp"
+                     android:layout_marginEnd="10dp"
+                     android:text="1000"
+                     android:textColor="@color/black"
+                     android:textSize="13sp"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <EditText
+                 android:id="@+id/et_claim"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="10dp"
+                 android:background="@drawable/edit_text_bg"
+                 android:hint="Enter Diamonds"
+                 android:padding="10dp"
+                 android:textSize="13sp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/cons_earned" />
+
+             <TextView
+                 android:id="@+id/tv_select_payment"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:padding="10dp"
+                 android:text="Select Payment type"
+                 android:textColor="@color/black"
+                 android:textSize="15sp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/et_claim" />
+
+             <RadioGroup
+                 android:id="@+id/rg_test"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/tv_select_payment">
+
+                 <RadioButton
+                     android:id="@+id/rb_upi"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Upi" />
+
+                 <EditText
+                     android:id="@+id/et_upi"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="10dp"
+                     android:background="@drawable/edit_text_bg"
+                     android:hint="add upi"
+                     android:padding="5dp"
+                     android:textColor="@color/black"
+                     android:textSize="13sp"
+                     android:visibility="gone" />
+
+                 <RadioButton
+                     android:id="@+id/rb_acc"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Bank details" />
+
+                 <LinearLayout
+                     android:id="@+id/ll_acc"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="10dp"
+                     android:background="@drawable/edit_text_bg"
+                     android:orientation="vertical"
+                     android:padding="10dp"
+                     android:visibility="gone">
+
+                     <EditText
+                         android:id="@+id/et_name"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Full name"
+                         android:textColor="@color/black"
+                         android:textSize="13sp" />
+
+                     <EditText
+                         android:id="@+id/et_bank_acc"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Account number"
+                         android:textColor="@color/black"
+                         android:textSize="13sp" />
+
+                     <EditText
+                         android:id="@+id/et_ifsc"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+
+                         android:hint="IFSC"
+                         android:textColor="@color/black"
+                         android:textSize="13sp" />
+
+                     <EditText
+                         android:id="@+id/et_bank_name"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Bank name"
+                         android:textColor="@color/black"
+                         android:textSize="13sp" />
+
+                 </LinearLayout>
+
+                 <RadioButton
+                     android:id="@+id/rb_paytm"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="paytm" />
+
+                 <EditText
+                     android:id="@+id/et_paytm"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="10dp"
+                     android:background="@drawable/edit_text_bg"
+                     android:hint="paytm number"
+                     android:padding="5dp"
+                     android:textColor="@color/black"
+                     android:textSize="13sp"
+                     android:visibility="gone" />
+
+             </RadioGroup>
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+     </androidx.core.widget.NestedScrollView>
+
+     <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/margin_30"
+
+         android:layout_marginEnd="@dimen/margin_30"
+         android:layout_marginBottom="@dimen/margin_30"
+         android:background="@drawable/btn_primary"
+         android:text="Claim Wallet"
+         android:textAllCaps="false"
+         android:textColor="@color/white"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent" />-->
+
+</RelativeLayout>
+

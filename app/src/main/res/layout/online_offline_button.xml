@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_online_offline"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <Button
+        android:id="@+id/but_online_offline_online"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/online"
+        android:fontFamily="@font/proximanova_regular"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_15" />
+
+
+    <Button
+        android:id="@+id/but_online_offline_offline"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_20"
+        android:fontFamily="@font/proximanova_regular"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="@string/offline"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_15" />
+
+
+</LinearLayout>

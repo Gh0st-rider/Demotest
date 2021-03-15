@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_booking_accepted_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/ll_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/shipped" />
+
+                        <TextView
+                            android:id="@+id/tv_booking_accepted_bottom_vehicle_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_5"
+                            android:text="@string/vehical_name"
+                            android:fontFamily="@font/proximanova_regular"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/text_15" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_booking_accepted_bottom_booking_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:padding="@dimen/padding_5"
+                        android:text="@string/trip_ID"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_booking_accepted_bottom_mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/phone" />
+
+
+                        <TextView
+                            android:id="@+id/tv_booking_accepted_bottom_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:text="9009866517"
+                            android:fontFamily="@font/proximanova_regular"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_15" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_booking_accepted_bottom_client_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:text="@string/client_name"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".60"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proximanova_regular"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:text="@string/price"
+                            android:textColor="@color/placeholder"
+                            android:textSize="@dimen/text_15" />
+
+                        <TextView
+                            android:id="@+id/tv_booking_accepted_bottom_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proximanova_regular"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:text="Price"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_15" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".40"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/proximanova_regular"
+
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:text="@string/eta"
+                            android:textColor="@color/placeholder"
+                            android:textSize="@dimen/text_15" />
+
+                        <TextView
+                            android:id="@+id/tv_booking_accepted_bottom_ETA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:fontFamily="@font/proximanova_regular"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_15" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_booking_accepted_bottom_arrived_at_pickup_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_shape_primary"
+                        android:text="@string/arrived_at_pickup_location"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btn_booking_accepted_bottom_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:background="@drawable/rounded_corner_shape_grey"
+                        android:text="@string/cancel"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+</LinearLayout>

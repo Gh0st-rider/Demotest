@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accept_popup_bg_color"
+    tools:context="com.sudrives.sudrivespartner.fragments.ContactUsFragment">
+
+
+    <!-- <android.support.v7.widget.CardView
+         android:id="@+id/cv_contactus"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/margin_20"
+         card_view:cardBackgroundColor="@color/cardview_light_background"
+         card_view:cardCornerRadius="@dimen/cardview_default_radius"
+         card_view:cardElevation="@dimen/cardview_default_elevation">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20">
+
+        <LinearLayout
+            android:id="@+id/ll_contactus_callus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="@dimen/padding_10"
+                android:text="@string/call_us"
+                android:fontFamily="@font/proximanova_regular"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/tv_contactus_callus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/proximanova_regular"
+                android:padding="@dimen/padding_10"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_16" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/hintcolor" />
+
+        <LinearLayout
+            android:id="@+id/ll_contactus_emailus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proximanova_regular"
+                android:padding="@dimen/padding_10"
+                android:text="@string/email_us"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/tv_contactus_emailus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_10"
+                android:fontFamily="@font/proximanova_regular"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_16" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/app_separator"
+            android:background="@color/hintcolor" />
+
+        <LinearLayout
+            android:id="@+id/ll_contactus_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proximanova_regular"
+                android:padding="@dimen/padding_10"
+                android:text="@string/website"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/tv_contactus_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/proximanova_regular"
+                android:padding="@dimen/padding_10"
+                android:autoLink="all"
+                android:linksClickable="true"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_16" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--  </android.support.v7.widget.CardView>-->
+</LinearLayout>

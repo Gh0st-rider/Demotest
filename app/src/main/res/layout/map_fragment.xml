@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MapsActivity"
+        >
+
+        <!-- Pin location -->
+
+        <include layout="@layout/booking_accpeted_top_layout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ib_go_IhaveArrive"
+
+                android:layout_centerInParent="true"
+                android:background="@drawable/go_btn"
+                android:layout_gravity="right|center"
+                android:layout_marginBottom="120dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:text="@string/go"
+                android:gravity="center"
+                android:fontFamily="@font/proximanova_regular"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+
+
+
+        <include layout="@layout/i_have_arrive_top_layout" />
+
+
+
+
+
+
+
+
+        <!-- driver Info -->
+
+        <include layout="@layout/home_driver_info_popup"
+
+
+            />
+
+
+        <!-- Online offline -->
+
+        <include
+            layout="@layout/online_offline_button" />
+
+        <include
+            layout="@layout/new_booking_accepted_bottom_layout"/>
+
+        <!--<include layout="@layout/booking_accepted_bottom_layout" />-->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ib_go"
+            android:background="@drawable/go_btn"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="120dp"
+            android:layout_marginRight="60dp"
+            android:visibility="gone"
+            android:fontFamily="@font/proximanova_regular"
+            android:text="@string/go"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_drop_off"
+            android:text="@string/drop_off_as_directed"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:gravity="center_horizontal"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:fontFamily="@font/proximanova_regular"
+            android:layout_marginBottom="80dp"
+
+            />
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/but_bigin_trip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_30"
+            android:layout_marginRight="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/rounded_corner_shape_primary"
+            android:gravity="center"
+            android:text="@string/bigin_trip"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/proximanova_regular"
+            android:textSize="@dimen/text_15" />
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_end_trip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/white"
+            >
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/but_end_trip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1.4"
+                android:background="@drawable/rounded_corner_shape_primary"
+                android:text="@string/end_trip"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+
+            <Button
+                android:visibility="visible"
+                android:id="@+id/but_emer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.6"
+                android:background="@drawable/rounded_corner_shape_red"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="Emergency"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+        </LinearLayout>
+
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="top"
+            android:id="@+id/cv_pinlocation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/map_pointer"
+
+                     />-->
+
+
+                <TextView
+                    android:id="@+id/tv_total_ride"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_15"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/ride_string"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:singleLine="true"
+                    android:padding="@dimen/padding_5" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="@dimen/text_15"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/slash"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:singleLine="true"
+                    app:layout_constraintStart_toEndOf="@+id/tv_total_ride"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:padding="@dimen/padding_5" />
+
+                <TextView
+                    android:id="@+id/tv_total_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/slash"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_15"
+                    android:text="@string/amount_String"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:singleLine="true"
+                    android:padding="@dimen/padding_5" />
+
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_width="24dp"
+                    android:id="@+id/iv_healthStatus"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:layout_marginStart="@dimen/margin_10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_petrol_station_healthy"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_status"
+                    android:text="status : "
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_healthStatus"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </fragment>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/upper_layout"
+        android:alpha=".50"
+        android:background="@color/white">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress_bar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress_bar"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/proximanova_regular"
+            android:text="Getting Location"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+
+    <Switch
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tb_onlineOffline"
+        android:textOff="@string/offline"
+        android:textOn="@string/online"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_100"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_20"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/proximanova_regular"
+        android:textSize="@dimen/text_15" />
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        android:background="@color/white"
+        app:behavior_peekHeight="@dimen/margin_50"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:orientation="horizontal"
+            android:background="@color/colorAccent"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/arrow_left"
+                android:src="@drawable/ic_baseline_arrow_upward_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginStart="@dimen/margin_10"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Recent Bookings"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/arrow_right"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginStart="@dimen/margin_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_baseline_arrow_upward_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/rec_recentbookings"
+            android:background="#e5e5e5"
+            />
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

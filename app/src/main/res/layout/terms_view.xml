@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/margin_20"
+    android:layout_marginRight="@dimen/margin_20"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="10dp"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:background="@drawable/error_gradient_effect_normal"
+    >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+    <RelativeLayout
+
+        android:id="@+id/rl_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/padding_10"
+            android:paddingTop="@dimen/padding_10"
+            android:text="@string/privacy_policy"
+            android:fontFamily="@font/proximanova_regular"
+
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_20" />
+
+        <ImageButton
+            android:id="@+id/ib_cancel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/x" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_below="@+id/rl_title_container">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="WebViewLayout">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/wv_terms_or_privacy"
+                android:paddingLeft="@dimen/margin_10"
+                android:fontFamily="@font/proximanova_regular"
+                android:paddingRight="@dimen/margin_10"/>
+
+
+            <!--<WebView-->
+                <!--android:id="@+id/wv_terms_or_privacy"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <!--</WebView>-->
+
+        </FrameLayout>
+
+
+    </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

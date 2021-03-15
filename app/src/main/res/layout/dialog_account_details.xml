@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20">
+
+        <LinearLayout
+            android:id="@+id/account_details_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/earned_money_rv"
+            android:layout_marginTop="@dimen/margin_20"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:text="Account Details"
+                    android:id="@+id/tv_account_title"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_20" />
+
+                <ImageView
+                    android:id="@+id/edit_account_details"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/ic_edit_black_24dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/account_details_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_details_l"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/account_holder_name_ev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                android:hint="Account Holder Name" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bank_name_ev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="textCapCharacters"
+                android:hint="Bank Name" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bank_ifsc_ev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="textCapCharacters"
+                android:hint="Ifsc Code" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/account_number_ev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="number"
+                android:hint="Account Number" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_paytm"
+            android:orientation="horizontal"
+            android:layout_below="@+id/account_details_view">
+        <ImageView
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:id="@+id/iv_paytm"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/paytm"
+            android:layout_below="@+id/account_details_view"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_below="@+id/account_details_view"
+            android:id="@+id/til_paytm">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add Paytm number"
+                android:background="@null"
+                android:id="@+id/tie_paytm"
+                android:inputType="number"
+                android:enabled="false"
+                android:textSize="@dimen/text_15"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#e5e5e5"
+            android:id="@+id/view1"
+            android:layout_below="@+id/ll_paytm"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_upi"
+            android:orientation="horizontal"
+            android:layout_below="@+id/view1">
+            <ImageView
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:id="@+id/iv_upi"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/bhim"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/margin_10"
+                android:id="@+id/til_upi">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Add Upi number"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:id="@+id/tie_upi"
+                    android:textSize="@dimen/text_15"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#e5e5e5"
+            android:id="@+id/view2"
+            android:layout_below="@+id/ll_upi"/>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/save_account_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginEnd="@dimen/margin_30"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:background="@drawable/rounded_corner_shape_grey"
+        android:text="Save"
+        android:layout_marginTop="@dimen/margin_40"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</LinearLayout>

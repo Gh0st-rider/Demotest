@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sudrives.sudrivespartner.fragments.AboutUsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_20"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tv_terms_and_condition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/selector_tv_tab_left"
+                android:gravity="center"
+                android:padding="@dimen/padding_10"
+                android:singleLine="true"
+                android:text="@string/terms_amp_condition"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12"
+                android:fontFamily="@font/proximanova_regular"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_drive_with_us"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/selector_tv_tab_right"
+                android:gravity="center"
+                android:padding="@dimen/padding_10"
+                android:singleLine="true"
+                android:text="@string/drive_with_us"
+                android:textColor="@color/black"
+                android:fontFamily="@font/proximanova_regular"
+                android:textSize="@dimen/text_12" />
+
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/wv_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20">
+
+        </WebView>
+
+
+    </LinearLayout>
+</LinearLayout>

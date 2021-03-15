@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MapsActivity">
+
+        <!-- Pin location -->
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_pinlocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/map_pointer"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_pinlocation_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pin_location"
+                    android:singleLine="true"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:padding="@dimen/padding_5" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <include layout="@layout/booking_accpeted_top_layout" />
+
+        <include layout="@layout/i_have_arrive_top_layout" />
+
+
+
+
+
+
+
+
+        <!-- driver Info -->
+
+        <include layout="@layout/home_driver_info_popup"
+
+            />
+
+
+        <!-- Online offline -->
+
+        <include
+            layout="@layout/online_offline_button" />
+
+        <include
+        layout="@layout/new_booking_accepted_bottom_layout"></include>
+
+        <!--<include layout="@layout/booking_accepted_bottom_layout" />-->
+
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/but_bigin_trip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_30"
+            android:layout_marginRight="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/online_button"
+            android:gravity="center"
+            android:text="@string/bigin_trip"
+            android:fontFamily="@font/proximanova_regular"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_15" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/but_end_trip"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/proximanova_regular"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_30"
+            android:layout_marginRight="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/off_line"
+            android:gravity="center"
+            android:text="@string/end_trip"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_15" />
+
+
+
+
+    </fragment>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/upper_layout"
+        android:alpha=".50"
+        android:background="@color/white">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress_bar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress_bar"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="Getting Location"
+            android:fontFamily="@font/proximanova_regular"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

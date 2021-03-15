@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HistoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_panel"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="55dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ib_back_button"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:background="@android:color/transparent"
+            android:src="@drawable/arrow_back_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/history"
+            android:fontFamily="@font/proximanova_regular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20" />
+
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:id="@+id/ib_notification"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:background="@android:color/transparent"
+            android:src="@drawable/notification" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:layout_below="@+id/header_panel"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_8">
+
+    <RelativeLayout
+        android:layout_width="@dimen/margin_250"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/show_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/background_right"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="@dimen/margin_15"
+            android:paddingTop="@dimen/padding_8"
+            android:paddingEnd="@dimen/margin_15"
+            android:paddingBottom="@dimen/padding_8"
+            android:text="Hi, How are you?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/margin_10" />
+
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/show_message"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_2"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:text=""
+            android:textColor="@color/quantum_grey"
+            android:textSize="@dimen/padding_6" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

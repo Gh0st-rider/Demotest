@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_filter_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_10"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:fontFamily="@font/proximanova_regular"
+            android:paddingTop="@dimen/padding_10"
+            android:text="@string/daily"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_15"
+
+            />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/placeholder" />
+
+
+        <TextView
+            android:id="@+id/tv_filter_weekily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_10"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:fontFamily="@font/proximanova_regular"
+
+            android:paddingTop="@dimen/padding_10"
+            android:text="@string/weekly"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_15"
+
+
+            />
+
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/placeholder" />
+
+    <TextView
+        android:id="@+id/tv_filter_monthly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_10"
+        android:paddingLeft="@dimen/padding_10"
+        android:fontFamily="@font/proximanova_regular"
+
+        android:paddingRight="@dimen/padding_10"
+        android:paddingTop="@dimen/padding_10"
+        android:text="@string/month"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_15"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/placeholder" />
+
+
+    <TextView
+        android:id="@+id/tv_filter_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_10"
+        android:paddingLeft="@dimen/padding_10"
+        android:fontFamily="@font/proximanova_regular"
+
+        android:paddingRight="@dimen/padding_10"
+        android:paddingTop="@dimen/padding_10"
+        android:text="@string/all"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_15"
+
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/placeholder" />
+    </LinearLayout>
+
+</LinearLayout>

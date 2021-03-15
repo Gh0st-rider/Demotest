@@ -1,0 +1,357 @@
+<resources>
+    <string name="app_name">SuDrives Partner</string>
+    <string name="direction_api_key">AIzaSyAVNsvTkS6bt2-q12RgQoL0S9g7o_VbxeQ</string>
+
+
+    <string name="facebook_app_id" translatable="false">441295239791609</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb441295239791609</string>
+
+    <!--Gps Setting-->
+    <string name="GPSAlertDialogTitle">GPS setting</string>
+    <string name="GPSAlertDialogMessage">GPS is not enabled. Do you want to go to setting menu" to "To continue, turn on device location</string>
+    <string name="settings">Settings</string>
+    <string name="no_thanks">No, THANKS</string>
+    <string name="cancel">Cancel</string>
+    <string name="action_settings">SETTINGS</string>
+
+
+    <!-- Error Messages On Network-->
+    <string name="error_no_con_msg">No internet connection found, please do check your network settings.</string>
+    <string name="error_no_connection">No Internet Connection</string>
+    <string name="text_settings">Check Internet Settings</string>
+    <string name="text_close">Close</string>
+
+    <!--for Update App-->
+    <string name="error_app_update_required">App Update Required</string>
+    <string name="error_hard_update">Current version of the app is no longer supported. Please update new version from Play Store.</string>
+
+
+    <!--Login-->
+    <string name="login">Login</string>
+    <string name="error_please_enter_mobile_number">Please enter mobile number</string>
+    <string name="error_please_enter_valid_mobile_number">Please enter valid mobile number</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="welcome_to_movecabs">Welcome to SuDrives Partner!</string>
+
+    <string name="welcome">Welcome!</string>
+
+    <string name="by_logging_in_you_are_agreed_to_our">By logging in, you are agreed to our terms of services and privacy policy</string>
+    <string name="otp">Enter OTP</string>
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="vehical_number">Vehicle Number</string>
+    <string name="upload_driving_licence">Upload Driving License</string>
+    <string name="upload_rc">Upload RC</string>
+    <string name="register">Register</string>
+    <string name="change">Change</string>
+    <string name="location">Location</string>
+    <string name="OTP_will_be_send_to_this_number_for_verification">OTP will be send to this number for \nverification</string>
+
+
+    <!--Registration-->
+    <string name="error_please_enter_first_name">Please enter first name</string>
+    <string name="error_please_enter_last_name">Please enter last name</string>
+    <string name="error_please_enter_location">Please enter location</string>
+    <string name="error_please_select_hear">Please select where does you hear about us?</string>
+    <string name="error_why_using_movecabs">Please select Su Drives usage</string>
+    <string name="select_hear">I will be using Su Drives for</string>
+    <string name="error_please_select_vehicle_type">Please select vehicle type</string>
+    <string name="vehicle_type">Select vehicle type</string>
+    <string name="select_vehicle_name">Select vehicle name</string>
+    <string name="error_please_upload_driving_license">Please upload driving license</string>
+    <string name="error_please_upload_rc">Please upload RC</string>
+    <string name="error_please_enter_vehicle_no">Please enter vehicle number</string>
+    <string name="error_please_enter_valid_vehicle_no">Please enter valid vehicle number</string>
+
+
+    <!--OTP-->
+    <string name="error_please_enter_otp">Please enter OTP</string>
+
+
+    <!-- popup title-->
+    <string name="text_confirmation">Confirmation</string>
+    <string name="thank_you_for_registration">Thank you for Registration</string>
+    <string name="registration_approval_will_be_sent_on_email">Registration approval will be sent on Mobile Number</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <string name="nav_profile">Profile</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_live_trip">Live trip</string>
+    <string name="nav_history">History</string>
+    <string name="nav_collection">Collections</string>
+    <string name="nav_payment">Payment</string>
+    <string name="nav_report_issue">Report issue</string>
+    <string name="nav_contact_us">Contact Us</string>
+    <string name="nav_about_us">About Us</string>
+    <string name="nav_logout">Logout</string>
+    <string name="nav_traffic_area">Traffic Area</string>
+    <string name="nav_document">Documents</string>
+    <string name="nac_claim_money">Cashout</string>
+    <string name="nav_subs_text">Subscribe</string>
+
+
+    <string name="title_activity_maps">Map</string>
+    <string name="pin_location">Pin Location</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="no_location_data_provided">No location data provider</string>
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_lat_long_used">Invalid lat lng</string>
+    <string name="no_address_found">No address found</string>
+    <string name="pickup_location">Pickup Location</string>
+    <string name="drop_off_location">Drop Off Location</string>
+    <string name="vehical_name">Vehicle Name</string>
+    <string name="client_name">Client Name</string>
+    <string name="time">Time</string>
+    <string name="reach_time">Reach Time</string>
+    <string name="bigin_trip">Begin Trip</string>
+    <string name="end_trip">End Trip</string>
+    <string name="did_you_drop_off_if_yes_please_enter_otp_to_verify">Did you drop-off, If yes please enter OTP to verify?</string>
+    <string name="submit">Submit</string>
+
+    <!--Collections-->
+    <string name="daily_collections">Daily Collections</string>
+    <string name="date">Date</string>
+    <string name="amount">Amount</string>
+    <string name="cash">Cash</string>
+    <string name="paytm">Paytm</string>
+    <string name="c_d_card">C/D Card</string>
+    <string name="trip_id">Trip ID</string>
+    <string name="total_distance">Total Distance</string>
+    <string name="cash_collected">Cash collected</string>
+    <string name="movecab_payout">Su Drives Payout</string>
+    <string name="save">Save</string>
+    <string name="home">Go Home</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="state_name">Select Home Location</string>
+
+
+    <string name="collect_payment_at_pickup_location"> &#8377; Collect payment at pickup location</string>
+    <string name="within">Within</string>
+    <string name="seconds">seconds</string>
+    <string name="second">second</string>
+    <string name="to">To:</string>
+    <string name="text_booking_id">Trip ID : </string>
+    <string name="eta">ETA:</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="rupee">&#8377;</string>
+    <string name="trip_ID">Trip ID</string>
+    <string name="select">Select</string>
+    <string name="Comments_Questions">Comments / Questions</string>
+    <string name="please_explain_your_issue_here">Please explain your issues here...</string>
+    <string name="Upload_a_picture">Upload a picture (Optional)</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="truck_type">Truck Type</string>
+    <string name="pick_up_date">Pick Up Date</string>
+    <string name="enter_origin">Enter Origin</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="status">Status</string>
+    <string name="report_issue">Report Issue</string>
+
+    <!--Contact Us-->
+    <string name="call_us">Call Us : </string>
+    <string name="email_us">Email Us : </string>
+    <string name="website">Website : </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="terms_amp_condition"><![CDATA[Terms & Conditions]]></string>
+    <string name="drive_with_us">Drive With Us</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="history">History</string>
+    <string name="to_teach_destination">to reach destination</string>
+
+    <string name="default_notification_channel_id">Su Drives</string>
+    <string name="any_comment">Comment</string>
+    <string name="no_data_found">No data found</string>
+    <string name="decline_request_reson">Please select reason</string>
+    <string name="online_payment">Online Payment</string>
+    <string name="fare_summary">Fare summary</string>
+    <string name="decline_request">Decline request</string>
+    <string name="business_usage">Business Usage</string>
+    <string name="personal_usage">Personal Usage</string>
+    <string name="notifications">Notifications</string>
+
+    <string name="update">Update</string>
+    <string name="action_cancel">Cancel</string>
+    <!--accept popup-->
+    <string name="accept">Accept</string>
+    <string name="street">Street</string>
+    <string name="name">Name</string>
+    <string name="collect_payment_at_pickup_location_">Collect payment at pickup location</string>
+
+
+    <!--Common-->
+    <string name="discription">description</string>
+    <string name="ok">Ok</string>
+    <string name="terms_and_condotion"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="message">message</string>
+    <string name="user_cancel_booking">User cancel booking</string>
+    <string name="are_you_sure_you_want_to_exit">Are you sure, you want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="today">Today |</string>
+    <string name="please_fill_email_address">Please fill Email Adrress</string>
+    <string name="enter_valid_email">Enter Valid Email</string>
+    <string name="please_fill_name">Please fill Name</string>
+    <string name="_trip">\n Trip</string>
+    <string name="_years">\n Years</string>
+    <string name="no_booking_found">No Booking Found</string>
+    <string name="please_select_reason">Please select Reason</string>
+    <string name="please_enter_comment">Please enter Comment </string>
+    <string name="accepted">Accepted</string>
+    <string name="trip_start">Trip Start</string>
+    <string name="completed">Completed</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="processed">Processed</string>
+    <string name="pending">Pending</string>
+    <string name="trip_time">Trip Time</string>
+    <string name="earning_details">Earning Details</string>
+    <string name="awesome_movecab">Awesome Su Drives!</string>
+    <string name="done">Done</string>
+    <string name="earnings">Earnings</string>
+    <string name="arrived_at_pickup_location">Arrived at Pickup location</string>
+    <string name="trip">Trip</string>
+    <string name="year">Year</string>
+    <string name="hin">Hin</string>
+    <string name="are_you_sure_you_want_to_go_online">Are you sure,you want to go online?</string>
+    <string name="are_you_sure_you_want_to_go_offline">Are you sure, you want to go offline?</string>
+    <string name="are_you_sure_you_want_to_cancel_booking">Are you sure, you want to cancel booking?</string>
+    <string name="are_you_sure_you_reach_at_pickup_location">Are you sure, you reach at pickup location?</string>
+    <string name="are_you_sure_you_want_to_start_trip">Are you sure, you want start trip?</string>
+    <string name="are_you_sure_you_want_to_end_trip">Are you sure, you want to end trip?</string>
+    <string name="share_your_experience">Share your experience</string>
+    <string name="share_your_trip_experience_with_us">Share your trip experience with us!</string>
+    <string name="rate_the_user">Rate the User</string>
+    <string name="tell_us_something">Tell us something!</string>
+    <string name="error_please_rate_user">Please rate user</string>
+    <string name="you_want_to_upload_bilty_slip">You want to upload bilty slip?</string>
+    <string name="description">Description</string>
+    <string name="report_issue_summary">Reported Issue Summary</string>
+
+    <string name="weekly">Weekly</string>
+    <string name="daily">Daily</string>
+    <string name="month">Monthly</string>
+    <string name="all">All</string>
+    <string name="okay">Okay</string>
+
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email_address">Email address</string>
+    <string name="vehicletype">Vehicle type</string>
+    <string name="here">here</string>
+    <string name="selecr_reason">Select Reason</string>
+    <string name="loading_map">Loading Map</string>
+    <string name="email_optional">Email (optional)</string>
+    <string name="change_application_language">Change application language</string>
+    <string name="english">English</string>
+    <string name="hindi">Hindi</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure, you want to logout?</string>
+    <string name="session_expire">Session Expire</string>
+    <string name="please_log_in_again">Your current session is expire, please log in again to enjoy the app</string>
+    <string name="are_your_sure_you_want_to_exit">Are you sure, you want to exit?</string>
+    <string name="clear_all">Clear All</string>
+    <string name="vehicle_name">Vehicle Name</string>
+    <string name="error_please_add_vehicle_name">Please add vehicle name</string>
+    <string name="error_please_select_vehicle_name">Please select vehicle name</string>
+    <string name="donate">Donate</string>
+    <string name="error_donate_amount">Please enter amount to donate</string>
+    <string name="did_you_want_to_begin_trip_if_yes_please_enter_otp_to_verify">Did you want to begin trip, if yes please enter OTP to verify</string>
+    <string name="call">Call</string>
+
+
+    <string name="booking_ID">Booking ID</string>
+    <string name="i_ve_arrived">I\'ve Arrived</string>
+    <string name="payment_has_been_made_by_the_passenger_click_ok_to_continue_time_of_ride">Payment has been made by the \nPassenger. Click ok to \ncontinue.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drop_off_as_directed">Drop Off: As directed</string>
+    <string name="donation_amount_cannot_more_than_paid_amount">Donation Amount can not be more than paid amount</string>
+    <string name="are_you_sure_you_have_arrived_at_the_pick_up">Are you sure you have \narrived at the pickup \nlocation? If you click continue, \ndirections to pick up end.</string>
+    <string name="continues">Continue</string>
+    <string name="continues1">Continue</string>
+    <string name="full_name">Full Name</string>
+    <string name="car_type">Car Type</string>
+    <string name="price">Price:</string>
+    <string name="no_record_found">No Record Found</string>
+    <string name="donation_Amount">Donation Amount</string>
+
+    <string name="driver_as_a_daily">Driver as a daily</string>
+    <string name="driver_as_a_rental">Driver as a Rental</string>
+    <string name="driver_as_a_outstation">Driver as a Outstation</string>
+    <string name="select_service">Select service</string>
+    <string name="please_select_at_least_one_service">Please select at least one service</string>
+
+    <string name="location_updated">Location Updated: %1$s</string>
+
+    <string name="pickup">Pickup</string>
+    <string name="destination">Destination</string>
+    <string name="go">Start \nMap</string>
+    <string name="permit">Permit</string>
+    <string name="insurance">Insurance</string>
+    <string name="fitness_certificate">Fitness Certificate</string>
+    <string name="error_please_upload_fitness">Please Upload Fitness Certificate</string>
+    <string name="error_please_upload_insurance">Please upload Insurance</string>
+    <string name="error_please_upload_permit">Please upload Permit copy</string>
+    <string name="error_please_upload_profile">Please upload profile picture</string>
+    <string name="current">current</string>
+    <string name="estimated_trip_amount">estimated trip amount</string>
+    <string name="title_activity_upload_document">UploadDocumentActivity</string>
+
+
+    <string name="skip">Skip>></string>
+    <string name="or">OR</string>
+
+    <string name="select_state">Select State</string>
+    <string name="select_city">Select City</string>
+
+    <string name="please_select_state">Please select state</string>
+    <string name="please_select_city">Please select city</string>
+
+    <string name="select_or_search_state">Select or search state</string>
+    <string name="select_or_search_city">Select or search city</string>
+    <string name="traffic_area">Traffic Area</string>
+    <string name="title_activity_traffic_area">Map</string>
+    <string name="title_update">Application Update!!!</string>
+    <string name="change_mode_to_driver">Change mode to driver</string>
+    <string name="send_sms_again_in">Send SMS Again in </string>
+    <string name="sec">sec</string>
+    <string name="install_app">Install App</string>
+    <string name="install">Install</string>
+    <string name="app_is_not_currently_installed">App is not currently installed,\nWould you like to install it?</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="you_can_chnage_the_languge_later_from_menu_section">You can change the languge later from \'Menu\' section</string>
+
+
+    //new string added
+    <string name="ride_string">Today Ride - </string>
+    <string name="amount_String">Today Amount - </string>
+    <string name="wrong_otp_entered">Verification Code is wrong</string>
+    <string name="pollution">Pollution</string>
+    <string name="road_tax">Road Tax</string>
+    <string name="wallet">My Wallet</string>
+    <string name="reg_consent">This is consent form for third party (Driver) who is going to enroll into multiple categories like mini, micro, sedan, luxary sedan.
+    The price will be change as per category.</string>
+    <string name="reg_consent_title">Driver Consent</string>
+    <string name="reg_consent_check">I accept terms and conditions.</string>
+
+
+    <!--//health status string-->
+    <string name="health_check_heading">Health check</string>
+    <string name="healthcheckdescription">There are three types of health status.</string>
+    <string name="greenstatusmean">Green status shows your car health is healthy and no need to check up for some time.</string>
+    <string name="yellowstatusmean">Yellow status shows you card need to check again from our nearest center</string>
+    <string name="redstatusmean">Red health status mean you missed our warning and now you rides will be blocked due to health checkup.</string>
+
+
+</resources>

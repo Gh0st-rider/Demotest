@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_list_collection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:contentPadding="@dimen/padding_10">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_5"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/tv_list_collection_booking_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:padding="@dimen/padding_5"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:singleLine="true"
+                        android:fontFamily="@font/proximanova_regular"
+
+                        android:text="@string/trip_id"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_14" />
+
+                    <View
+                        android:layout_width=".60dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/black"
+                        android:layout_toLeftOf="@id/time_layout"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:id="@+id/time_layout"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/iv_time"
+                            android:src="@drawable/clock"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_list_collection_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/iv_time"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/proximanova_regular"
+
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:text="@string/time"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/text_14" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/horizontal_line" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:text="@string/total_distance"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:textColor="@color/placeholder"
+                        android:textSize="@dimen/text_14" />
+
+                    <TextView
+                        android:id="@+id/tv_list_collection_total_distance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="right"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:text="00"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:text="@string/cash_collected"
+                        android:textColor="@color/placeholder"
+                        android:fontFamily="@font/proximanova_regular"
+
+                        android:textSize="@dimen/text_14" />
+
+                    <TextView
+                        android:id="@+id/tv_list_collection_cash_collection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="right"
+                        android:padding="@dimen/padding_5"
+                        android:fontFamily="@font/proximanova_regular"
+
+                        android:singleLine="true"
+                        android:text="00"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:text="@string/movecab_payout"
+                        android:fontFamily="@font/proximanova_regular"
+
+                        android:textColor="@color/placeholder"
+                        android:textSize="@dimen/text_14" />
+
+                    <TextView
+                        android:id="@+id/tv_list_collection_haulage_payout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="right"
+                        android:fontFamily="@font/proximanova_regular"
+
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:text="00"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:text="@string/donation_Amount"
+                        android:fontFamily="@font/proximanova_regular"
+
+                        android:textColor="@color/placeholder"
+                        android:textSize="@dimen/text_14" />
+
+                    <TextView
+                        android:id="@+id/tv_donation_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="right"
+                        android:fontFamily="@font/proximanova_regular"
+
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:text="00"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

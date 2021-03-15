@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#22769B</color>
+    <color name="colorPrimaryDark">#19546E</color>
+    <color name="colorAccent">#35B0E6</color>
+    <color name="dark_grey">#727272</color>
+    <color name="white">#ffffff</color>
+    <color name="thanku">#2598e0</color>
+    <color name="black">#000000</color>
+    <color name="dark_yellow">#22769B</color>
+
+    <color name="green">#86CB56</color>
+    <color name="red_error_color">#D94D50</color>
+
+
+    <color name="blue">#05B9ED</color>
+    <color name="placeholder">#9B9B9B</color>
+    <color name="text_color">#323643</color>
+    <color name="yellow">#E8DC0F</color>
+    <color name="rating_clr">#22769B</color>
+    <color name="decline_bg">#f0f1f3</color>
+    <color name="fare_bg">#F3F4F6</color>
+    <color name="pending_color">#309BCA</color>
+    <color name="dialog_grey">#F3F4F6</color>
+
+    <color name="navigation_selection_color">#22769B</color>
+    <color name="navigation_item_highlight_color">#22769B</color>
+
+    <color name="navigation_menu_language_color">#22769B</color>
+    
+    <color name="collection_Amout_color">#22769B</color>
+
+    <color name="theme_color">#22769B</color>
+
+    <color name="accept_popup_bg_color">#F5F5F6</color>
+    <color name="hintcolor">#A9ABB2</color>
+    <color name="text_grey">#323642</color>
+    <color name="text_grey_trans">#51323642</color>
+    <color name="blue_alpha">#9CD9FF</color>
+
+
+
+    <!-- Color-code of haulage: Light-blue: 05B9ED, Dark-blue:1264B0, Red: D94D50, Placeholder: 9B9B9B, Text-color: 323643, Gradients: (1264B0, 05B9ED)-->
+
+
+
+</resources>

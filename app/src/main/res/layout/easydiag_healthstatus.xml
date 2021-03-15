@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_10"
+    android:background="@color/black">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heading"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/health_check_heading"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginTop="@dimen/margin_20"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/healthcheckdescription"/>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/iv_healthGreen"
+        android:src="@drawable/ic_petrol_station_healthy"
+        app:layout_constraintTop_toBottomOf="@+id/desc"
+        android:layout_marginTop="@dimen/margin_20"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/greenhealth"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@+id/desc"
+        app:layout_constraintStart_toEndOf="@+id/iv_healthGreen"
+        android:text="@string/greenstatusmean"/>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/iv_healthYellow"
+        android:layout_marginTop="@dimen/margin_10"
+        android:src="@drawable/ic_petrol_station_warning"
+        app:layout_constraintTop_toBottomOf="@+id/greenhealth"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yellowhealth"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="@dimen/margin_10"
+
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@+id/greenhealth"
+        app:layout_constraintStart_toEndOf="@+id/iv_healthYellow"
+        android:text="@string/yellowstatusmean"/>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/iv_healthRed"
+        android:layout_marginTop="@dimen/margin_10"
+        android:src="@drawable/ic_petrol_station_unhealthy"
+        app:layout_constraintTop_toBottomOf="@+id/yellowhealth"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/redhealth"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@+id/yellowhealth"
+        app:layout_constraintStart_toEndOf="@+id/iv_healthRed"
+        android:text="@string/redstatusmean"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

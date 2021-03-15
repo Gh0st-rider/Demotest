@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_20"
+    android:layout_marginRight="@dimen/margin_20"
+    android:background="@drawable/success_dialog"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingTop="10dp"
+    tools:ignore="MissingPrefix">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/SingleButton_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_10"/>
+
+    <TextView
+        android:id="@+id/SingleButton_title"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/text_confirmation"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_25"
+        android:fontFamily="@font/proximanova_regular" />
+
+    <TextView
+        android:id="@+id/SingleButton_message"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center"
+        android:fontFamily="@font/proximanova_regular"
+
+        android:paddingLeft="@dimen/padding_10"
+        android:paddingRight="@dimen/padding_10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18" />
+
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center"
+
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text" />
+-->
+
+    <TextView
+        android:id="@+id/refund_done_dialog_tv"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/here"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_15"
+        android:textStyle="bold"
+        android:fontFamily="@font/proximanova_regular"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/SingleButton_done"
+        fontPath="fonts/opensans_semibold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginLeft= "@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/padding_10"
+        android:fontFamily="@font/proximanova_regular"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5"
+        android:paddingTop="@dimen/padding_10"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_15"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/SingleButton_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:fontFamily="@font/proximanova_regular"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_15"
+        android:visibility="gone" />
+
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:drawable="@drawable/gradient_effect_offline_pressed" android:state_pressed="true" />
+
+    <!-- Non focused states -->
+    <item android:drawable="@drawable/gradient_effect_offline_normal" />
+
+
+</selector>
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:padding="@dimen/padding_5"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/done"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thank_you_for_registration"
+            android:textSize="@dimen/text_20"
+            android:maxLines="2"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:fontFamily="@font/proximanova_regular"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/margin_10"/>
+
+
+        <TextView
+            android:id="@+id/tv_thankyou_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registration_approval_will_be_sent_on_email"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_12"
+            android:padding="@dimen/margin_5"
+            android:maxLines="2"
+            android:fontFamily="@font/proximanova_regular"
+
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_thankyou_ok"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginLeft= "@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:fontFamily="@font/proximanova_regular"
+            android:background="@drawable/btn_bg"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/padding_10"
+            android:paddingLeft="@dimen/padding_5"
+            android:paddingRight="@dimen/padding_5"
+            android:paddingTop="@dimen/padding_10"
+            android:text="@string/ok"
+            android:textSize="@dimen/text_15"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

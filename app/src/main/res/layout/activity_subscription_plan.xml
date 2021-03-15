@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:src="@drawable/arrow_back_white_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/subc"
+            android:text="Select Subscription"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_15"
+            android:fontFamily="@font/proximanova_regular"
+            app:layout_constraintStart_toEndOf="@+id/back"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            android:padding="@dimen/margin_15"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_subs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:padding="@dimen/padding_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:cardCornerRadius="@dimen/margin_10"
+            app:layout_constraintTop_toBottomOf="@+id/rec_subs">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_15"
+                    android:textColor="@color/black"
+                    android:layout_margin="@dimen/margin_10"
+                    android:text="Description:" />
+
+                <TextView
+                    android:id="@+id/tv_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_margin="@dimen/margin_10"
+                    android:textColor="@color/dark_grey"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper malesuada proin libero nunc consequat. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Eget arcu dictum varius duis. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Odio tempor orci dapibus ultrices in iaculis nunc. Ornare massa eget egestas purus viverra accumsan in. Quis commodo odio aenean sed adipiscing diam. At tempor commodo ullamcorper a lacus vestibulum. Imperdiet sed euismod nisi porta lorem mollis aliquam ut. Ornare arcu dui vivamus arcu felis bibendum ut tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper malesuada proin libero nunc consequat. "/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

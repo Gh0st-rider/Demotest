@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NotificationActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/white"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp">
+
+            <RelativeLayout
+                android:id="@+id/header_panel"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ib_back_button"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/arrow_back_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/notifications"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_clear_all"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/clear_all"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/margin_15"/>
+
+            </RelativeLayout>
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:id="@+id/rl_notification"
+        >
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_notification_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:padding="@dimen/padding_10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <!--<ProgressBar-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:id="@+id/progress_bar"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_marginBottom="@dimen/margin_10"/>-->
+
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_norecordfound"
+        android:fontFamily="@font/proximanova_regular"
+android:visibility="gone"
+        />
+
+</RelativeLayout>

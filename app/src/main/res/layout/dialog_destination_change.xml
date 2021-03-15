@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tv_dialog_title"
+        android:text="Change in destination"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:padding="@dimen/_15sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <fragment
+
+        android:id="@+id/mapdiag"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/location_icon"
+        app:layout_constraintTop_toBottomOf="@+id/mapdiag"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/ic_baseline_add_location_alt_24"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_destination"
+        app:layout_constraintTop_toBottomOf="@+id/mapdiag"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        android:ellipsize="end"
+        android:ems="16"
+        android:lines="2"
+        android:text="Location"
+        android:fontFamily="@font/montserrat_medium"
+        app:layout_constraintStart_toEndOf="@+id/location_icon"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_apply"
+        app:layout_constraintTop_toBottomOf="@+id/tv_destination"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/rounded_corner_shape_primary"
+        android:text="Okay"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_13sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

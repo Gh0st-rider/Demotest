@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.EarningActivity"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_earnings_booking_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_panel"
+        android:layout_marginTop="@dimen/margin_20"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:contentPadding="@dimen/padding_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_earnings_booking_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_5"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:text="@string/trip_ID"
+                    android:textColor="@color/placeholder"
+                    android:textSize="@dimen/text_14" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/dark_grey" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/clock" />
+
+
+                    <TextView
+                        android:id="@+id/tv_earnings_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:padding="@dimen/padding_5"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:text="@string/time"
+                        android:textColor="@color/placeholder"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/dark_grey" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/calendar" />
+
+
+                    <TextView
+                        android:id="@+id/tv_earnings_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:padding="@dimen/padding_5"
+
+                        android:text="@string/date"
+                        android:textColor="@color/placeholder"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll_earnings_location_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:background="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:contentPadding="@dimen/padding_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_earnings_pickup_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_pickup_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/padding_5"
+                                android:src="@drawable/map_pointer" />
+
+
+                            <TextView
+                                android:id="@+id/tv_earnings_pickup_location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/padding_10"
+                                android:fontFamily="@font/proximanova_regular"
+                                android:singleLine="true"
+                                android:text="@string/pickup_location"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_earnings_drop_Off_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_drop_Off_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/padding_5"
+                                android:src="@drawable/navigation" />
+
+
+                            <TextView
+                                android:id="@+id/tv_earnings_drop_Off_location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/padding_10"
+                                android:fontFamily="@font/proximanova_regular"
+
+                                android:singleLine="true"
+                                android:text="@string/drop_off_location"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/dark_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight=".5"
+                                android:orientation="vertical"
+                                android:padding="@dimen/padding_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"
+                                    android:fontFamily="@font/proximanova_regular"
+
+                                    android:text="@string/total_distance"
+                                    android:textColor="@color/placeholder"
+                                    android:textSize="@dimen/text_14" />
+
+                                <TextView
+                                    android:id="@+id/tv_earnings_total_distance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="00"
+                                    android:fontFamily="@font/proximanova_regular"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_14" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight=".5"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/padding_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@string/trip_time"
+                                    android:fontFamily="@font/proximanova_regular"
+
+                                    android:textColor="@color/placeholder"
+                                    android:textSize="@dimen/text_14" />
+
+                                <TextView
+                                    android:id="@+id/tv_earnings_trip_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="00"
+                                    android:fontFamily="@font/proximanova_regular"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_14" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_Earning_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    app:cardCornerRadius="10dp"
+                    app:contentPadding="@dimen/padding_10">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/padding_5"
+                                android:singleLine="true"
+                                android:fontFamily="@font/proximanova_regular"
+                                android:text="@string/earning_details"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/dark_grey" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:padding="@dimen/padding_5"
+                                android:fontFamily="@font/proximanova_regular"
+
+                                android:singleLine="true"
+                                android:text="@string/total_distance"
+                                android:textColor="@color/placeholder"
+                                android:textSize="@dimen/text_14" />
+
+                            <TextView
+                                android:id="@+id/tv_earnings_total_distance_amount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:fontFamily="@font/proximanova_regular"
+                                android:gravity="right"
+                                android:padding="@dimen/padding_5"
+                                android:singleLine="true"
+                                android:text="00"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text_14" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:padding="@dimen/padding_5"
+                                android:singleLine="true"
+                                android:fontFamily="@font/proximanova_regular"
+
+                                android:text="@string/cash_collected"
+                                android:textColor="@color/placeholder"
+                                android:textSize="@dimen/text_14" />
+
+                            <TextView
+                                android:id="@+id/tv_earnings_cash_collected"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:gravity="right"
+                                android:padding="@dimen/padding_5"
+                                android:fontFamily="@font/proximanova_regular"
+                                android:singleLine="true"
+                                android:text="00"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:padding="@dimen/padding_5"
+                                android:fontFamily="@font/proximanova_regular"
+
+                                android:singleLine="true"
+                                android:text="@string/movecab_payout"
+                                android:textColor="@color/placeholder"
+                                android:textSize="@dimen/text_14" />
+
+                            <TextView
+                                android:id="@+id/tv_tv_earnings_haulage_payout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:fontFamily="@font/proximanova_regular"
+                                android:gravity="right"
+                                android:padding="@dimen/padding_5"
+                                android:singleLine="true"
+                                android:text="00"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:padding="@dimen/padding_5"
+                                android:singleLine="true"
+                                android:text="@string/donation_Amount"
+                                android:fontFamily="@font/proximanova_regular"
+                                android:textColor="@color/placeholder"
+                                android:textSize="@dimen/text_14" />
+
+                            <TextView
+                                android:id="@+id/tv_donation_amount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5"
+                                android:gravity="right"
+                                android:fontFamily="@font/proximanova_regular"
+                                android:padding="@dimen/padding_5"
+                                android:singleLine="true"
+                                android:text="00"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/text_14" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/header_panel"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="55dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ib_back_button"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:background="@android:color/transparent"
+            android:src="@drawable/arrow_back_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/earnings"
+            android:fontFamily="@font/proximanova_regular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20" />
+<!--
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:id="@+id/ib_notification"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_10"
+           android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:src="@drawable/notification" />-->
+
+        <RelativeLayout
+            android:id="@+id/toolbarOptionNotification"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:id="@+id/ib_notification"
+                android:scaleType="centerInside"
+                android:src="@drawable/notification"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_notification_Count"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:visibility="gone"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:maxLength="2"
+                android:layout_marginTop="@dimen/margin_5"
+                android:textSize="12dp"
+                android:background="@drawable/red_circle"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

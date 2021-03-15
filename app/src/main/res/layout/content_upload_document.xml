@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/but_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_10"
+                android:layout_gravity="end"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_15"
+                android:fontFamily="@font/proximanova_regular"
+                android:text="@string/skip"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="@dimen/margin_100"
+                android:layout_height="@dimen/margin_100"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_marginBottom="@dimen/text_20"
+                android:src="@mipmap/app_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_registration_drivingLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/padding_10"
+                    android:src="@drawable/license" />
+
+                <TextView
+
+                    android:id="@+id/tv_registration_uploadDrivingL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:hint="@string/upload_driving_licence"
+
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:src="@drawable/attachment" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/placeholder" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_registration_drivingRC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_10"
+                    android:src="@drawable/certificate" />
+
+                <TextView
+                    android:id="@+id/tv_registration_uploadRC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:hint="@string/upload_rc"
+
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+
+                    android:src="@drawable/attachment" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/placeholder" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_fitness_certificate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_10"
+                    android:src="@drawable/certificate" />
+
+                <TextView
+                    android:id="@+id/tv_fitness_certificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:hint="@string/fitness_certificate"
+
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:src="@drawable/attachment" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/placeholder" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_insurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_10"
+                    android:src="@drawable/certificate" />
+
+                <TextView
+                    android:id="@+id/tv_insurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:hint="@string/insurance"
+
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+
+                    android:src="@drawable/attachment" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/placeholder" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_permit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_10"
+                    android:src="@drawable/certificate" />
+
+                <TextView
+                    android:id="@+id/tv_permit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:hint="@string/permit"
+
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+
+                    android:src="@drawable/attachment" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/placeholder" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_pollution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_10"
+                    android:src="@drawable/certificate" />
+
+                <TextView
+                    android:id="@+id/tv_pollution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:hint="@string/pollution"
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+
+                    android:src="@drawable/attachment" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/placeholder" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_road_tax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_10"
+                    android:src="@drawable/certificate" />
+
+                <TextView
+                    android:id="@+id/tv_road_tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:hint="@string/road_tax"
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:src="@drawable/attachment" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/placeholder" />
+
+
+            <Button
+                android:id="@+id/but_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_marginRight="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_shape_primary"
+                android:fontFamily="@font/proximanova_regular"
+                android:text="@string/save"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:layout_marginBottom="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/or"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/proximanova_regular"
+                android:layout_gravity="center" />
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/error_layout"
+            layout="@layout/error_layout" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>
+

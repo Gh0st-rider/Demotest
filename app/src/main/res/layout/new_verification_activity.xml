@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHeight_percent="0.6"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/iv_imagelogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/margin_50"
+            android:src="@mipmap/app_icon"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_appname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proximanova_regular"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_15"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/iv_imagelogo" />
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/proximanova_regular"
+            android:text="Be our partner and enjoy benefits"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:layout_height="150dp"
+            android:layout_width="200dp"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_appname"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/text_20"
+            android:src="@drawable/ferrari_car_line_art"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            android:layout_height="0dp"
+            card_view:layout_constraintHeight_percent="0.4"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/india" />
+
+                <TextView
+
+                    android:id="@+id/tv_verification_mobileNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:text="9009866517" />
+
+                <TextView
+
+                    android:id="@+id/tv_verification_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/change"
+                    android:textColor="@color/blue"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:id="@+id/ll_mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/et_otp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberPassword"
+                        android:maxLength="1"
+                        android:minWidth="50dp"
+                        android:paddingLeft="@dimen/padding_5"
+                        android:paddingTop="@dimen/padding_7"
+                        android:paddingRight="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_7"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/placeholder" />
+
+                    <EditText
+                        android:id="@+id/et_otp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberPassword"
+
+                        android:maxLength="1"
+                        android:minWidth="50dp"
+                        android:paddingLeft="@dimen/padding_5"
+                        android:paddingTop="@dimen/padding_7"
+                        android:paddingRight="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_7"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/placeholder" />
+
+                    <EditText
+                        android:id="@+id/et_otp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberPassword"
+
+                        android:maxLength="1"
+                        android:minWidth="50dp"
+                        android:paddingLeft="@dimen/padding_5"
+                        android:paddingTop="@dimen/padding_7"
+                        android:paddingRight="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_7"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/placeholder" />
+
+                    <EditText
+                        android:id="@+id/et_otp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberPassword"
+
+                        android:maxLength="1"
+                        android:minWidth="50dp"
+                        android:paddingLeft="@dimen/padding_5"
+                        android:paddingTop="@dimen/padding_7"
+                        android:paddingRight="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_7"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/placeholder" />
+
+                    <EditText
+                        android:id="@+id/et_otp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberPassword"
+
+                        android:maxLength="1"
+                        android:minWidth="50dp"
+                        android:paddingLeft="@dimen/padding_5"
+                        android:paddingTop="@dimen/padding_7"
+                        android:paddingRight="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_7"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/placeholder" />
+
+
+                    <EditText
+                        android:id="@+id/et_otp5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberPassword"
+
+                        android:maxLength="1"
+                        android:minWidth="50dp"
+                        android:paddingLeft="@dimen/padding_5"
+                        android:paddingTop="@dimen/padding_7"
+                        android:paddingRight="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_7"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/placeholder" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_Verify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginRight="@dimen/margin_30"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/proximanova_regular"
+                android:gravity="center"
+                android:text="@string/verify"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_resendOtp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:gravity="center"
+
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/resend_otp"
+                    android:textColor="@color/placeholder" />
+
+                <TextView
+                    android:id="@+id/tv_resendOtpTimer"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:gravity="center"
+
+                    android:padding="@dimen/padding_10"
+
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <include
+        android:id="@+id/error_layout"
+        layout="@layout/error_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

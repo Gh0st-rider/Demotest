@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/white"
+            android:fitsSystemWindows="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_decline_request_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="@dimen/padding_10"
+                android:text="@string/fare_summary"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header"
+            android:layout_margin="@dimen/margin_10"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_20"
+                android:background="@drawable/fare_img" />
+
+
+            <TextView
+                android:id="@+id/tv_fare_summary_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_10"
+                android:fontFamily="@font/proximanova_regular"
+                android:text="@string/awesome_movecab"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_25"
+                 />
+
+            <TextView
+                android:id="@+id/tv_fare_summary_totalcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_fare_summary_message"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_10"
+                android:fontFamily="@font/proximanova_regular"
+                android:text="@string/total_cost"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_20"
+                 />
+
+
+            <TextView
+                android:id="@+id/tv_fare_summary_total_cost"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_fare_summary_totalcast"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="@string/amount"
+                android:fontFamily="@font/proximanova_regular"
+                android:textColor="@color/dark_yellow"
+                android:textSize="@dimen/text_30"
+                 />
+
+
+            <TextView
+                android:id="@+id/tv_fare_summary_total_distance"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_fare_summary_total_cost"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/total_distance"
+                android:textColor="@color/black"
+                android:fontFamily="@font/proximanova_regular"
+                android:textSize="@dimen/text_20"
+                 />
+
+
+            <LinearLayout
+                android:id="@+id/donate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/tv_fare_summary_total_distance"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".60"
+                    android:id="@+id/et_donate_amount"
+                    android:background="@drawable/left_rounded_border"
+                    android:gravity="center_vertical"
+                    android:hint="@string/rupee"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="20dp"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:textSize="@dimen/text_18" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".40"
+                    android:background="@drawable/right_rounded_orangebutton"
+                    android:text="@string/donate"
+                    android:id="@+id/bt_donate"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_18"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/proximanova_regular"
+                     />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_fare_summary_done"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/donate_layout"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/margin_20"
+                android:fontFamily="@font/proximanova_regular"
+                android:background="@color/colorPrimary"
+                android:text="@string/done"
+                android:textColor="@color/white"
+
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
+

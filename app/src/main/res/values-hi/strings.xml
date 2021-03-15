@@ -1,0 +1,345 @@
+<resources>
+    <string name="app_name">SuDrives Partner</string>
+    <string name="direction_api_key">AIzaSyAVNsvTkS6bt2-q12RgQoL0S9g7o_VbxeQ</string>
+
+    <!--Gps Setting-->
+    <string name="GPSAlertDialogTitle">जीपीएस सेटिंग</string>
+    <string name="GPSAlertDialogMessage">जीपीएस सक्षम नहीं है। क्या आप जारी रखने के लिए "टू" मेनू सेट करना चाहते हैं, डिवाइस स्थान चालू करें</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="no_thanks">जी नहीं, धन्यवाद</string>
+    <string name="cancel">रद करे</string>eq
+    <string name="action_settings">सेटिंग्स</string>
+
+
+    <!-- Error Messages On Network-->
+    <string name="error_no_con_msg">कोई इंटरनेट कनेक्शन नहीं मिला, कृपया अपनी नेटवर्क सेटिंग्स जांचें।</string>
+    <string name="error_no_connection">कोई इंटरनेट कनेक्शन नहीं</string>
+    <string name="text_settings">इंटरनेट सेटिंग्स की जांच करें</string>
+    <string name="text_close">बंद करे</string>
+
+    <!--for Update App-->
+    <string name="error_app_update_required">ऐप अपडेट आवश्यक है</string>
+    <string name="error_hard_update">ऐप का वर्तमान संस्करण अब समर्थित नहीं है। कृपया Play Store से नया संस्करण अपडेट करें।</string>
+
+
+    <!--Login-->
+    <string name="login">लॉग इन करें</string>
+    <string name="error_please_enter_mobile_number">कृपया मोबाइल नंबर दर्ज करें</string>
+    <string name="error_please_enter_valid_mobile_number">कृपया वैध मोबाइल नंबर दर्ज करें</string>
+    <string name="enter_mobile_number">मोबाइल नंबर दर्ज करें</string>
+    <string name="welcome_to_movecabs">Su Drives में आपका स्वागत है!</string>
+
+    <string name="welcome">स्वागत हे!</string>
+
+    <string name="by_logging_in_you_are_agreed_to_our">लॉग इन करके, आप हमारी सेवाओं की शर्तों और गोपनीयता नीति से सहमत हैं</string>
+    <string name="otp">ओटीपी दर्ज करें</string>
+    <string name="verify">सत्यापित करें</string>
+    <string name="resend_otp">ओटीपी पुनः भेजें</string>
+    <string name="first_name">पहला नाम</string>
+    <string name="last_name">अंतिम नाम</string>
+    <string name="vehical_number">गाड़ी नंबर</string>
+    <string name="upload_driving_licence">ड्राइविंग लाइसेंस अपलोड करें</string>
+    <string name="upload_rc">आरसी अपलोड करें</string>
+    <string name="register">रजिस्टर</string>
+    <string name="change">परिवर्तन</string>
+    <string name="location">स्थान</string>
+    <string name="OTP_will_be_send_to_this_number_for_verification">सत्यापन के लिए ओटीपी इस नंबर पर भेजा जाएगा</string>
+
+
+    <!--Registration-->
+    <string name="error_please_enter_first_name">कृपया पहला नाम दर्ज करें</string>
+    <string name="error_please_enter_last_name">कृपया अंतिम नाम दर्ज करें</string>
+    <string name="error_please_enter_location">कृपया स्थान दर्ज करें</string>
+    <string name="error_please_select_hear">कृपया चुनें कि आप हमारे बारे में कहां सुनते हैं?</string>
+    <string name="error_why_using_movecabs">कृपया Su Drives उपयोग का चयन करें</string>
+    <string name="select_hear">मैं के लिए Su Drives का उपयोग करूँगा</string>
+    <string name="error_please_select_vehicle_type">गाड़ी प्रकार का चयन करें</string>
+    <string name="vehicle_type">गाड़ी का मॉडल चुनें</string>
+    <string name="vehicle_name"> गाड़ी का नाम चुनें</string>
+
+    <string name="error_please_upload_driving_license">ड्राइविंग लाइसेंस अपलोड करें</string>
+    <string name="error_please_upload_rc">कृपया आरसी अपलोड करें</string>
+    <string name="error_please_enter_vehicle_no">कृपया गाड़ी नंबर दर्ज करें</string>
+    <string name="error_please_enter_valid_vehicle_no">कृपया मान्य गाड़ी नंबर दर्ज करें</string>
+
+
+    <!--OTP-->
+    <string name="error_please_enter_otp">कृपया ओटीपी दर्ज करें</string>
+
+
+    <!-- popup title-->
+    <string name="text_confirmation">पुष्टीकरण</string>
+    <string name="thank_you_for_registration">पंजीकरण के लिए धन्यवाद</string>
+    <string name="registration_approval_will_be_sent_on_email">पंजीकरण अनुमोदन मोबाइल नंबर पर भेजा जाएगा</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">खुला नेविगेशन ड्रॉवर</string>
+    <string name="navigation_drawer_close">नेविगेशन ड्रॉवर बंद करें</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">नेविगेशन हेडर</string>
+
+
+    <string name="nav_profile">प्रोफाइल</string>
+    <string name="nav_home">होम</string>
+    <string name="nav_live_trip">लाइव यात्रा</string>
+    <string name="nav_history">इतिहास</string>
+    <string name="nav_collection">संग्रह</string>
+    <string name="nav_payment">भुगतान</string>
+    <string name="nav_report_issue">समस्या की रिपोर्ट करें</string>
+    <string name="nav_contact_us">हमसे संपर्क करें</string>
+    <string name="nav_about_us">हमारे बारे में</string>
+    <string name="nav_logout">लोग आउट</string>
+    <string name="nav_traffic_area">यातायात क्षेत्र</string>
+    <string name="nav_document">दस्तावेज़</string>
+    <string name="nac_claim_money">Claim Money</string>
+
+
+    <string name="title_activity_maps">नक्शा</string>
+    <string name="pin_location">पिन स्थान</string>
+    <string name="online">ऑनलाइन</string>
+    <string name="offline">ऑफलाइन</string>
+    <string name="no_location_data_provided">कोई स्थान डेटा प्रदाता नहीं</string>
+    <string name="service_not_available">सेवा उपलब्ध नहीं है</string>
+    <string name="invalid_lat_long_used">Invalide लैट एलएनजी</string>
+    <string name="no_address_found">कोई पता नहीं मिला</string>
+    <string name="pickup_location">उठाने की जगह</string>
+    <string name="drop_off_location">छोड़ने का स्थान</string>
+    <string name="vehical_name">गाड़ी का नाम</string>
+    <string name="client_name">ग्राहक का नाम</string>
+    <string name="time">पहर</string>
+    <string name="reach_time">पहुंचने का समय</string>
+    <string name="bigin_trip">यात्रा शुरू करो</string>
+    <string name="end_trip">अंत यात्रा</string>
+    <string name="did_you_drop_off_if_yes_please_enter_otp_to_verify">क्या आपने ड्रॉप-ऑफ किया था, यदि हां कृपया सत्यापित करने के लिए ओटीपी दर्ज करें?</string>
+    <string name="submit">जमा करें</string>
+
+    <!--Collections-->
+    <string name="daily_collections">दैनिक संग्रह</string>
+    <string name="date">दिनांक</string>
+    <string name="amount">रकम</string>
+    <string name="cash">कैश</string>
+    <string name="paytm">Paytm</string>
+    <string name="c_d_card">सी / डी कार्ड</string>
+    <string name="trip_id">ट्रिप आईडी</string>
+    <string name="total_distance">कुल दूरी</string>
+    <string name="cash_collected">नकद एकत्रित</string>
+    <string name="movecab_payout">हाय कैब पेआउट</string>
+    <string name="save">सहेजें</string>
+    <string name="home">घर जाओ</string>
+    <string name="vehicle_number">गाड़ी संख्या</string>
+    <string name="state_name">Select Home Location</string>
+
+
+    <string name="collect_payment_at_pickup_location"> &#8377; पिकअप स्थान पर भुगतान ले लीजिए</string>
+    <string name="within">अंदर</string>
+    <string name="seconds">सेकंड</string>
+    <string name="second">सेकंड</string>
+    <string name="to">सेवा मेरे:</string>
+    <string name="text_booking_id">ट्रिप आईडी : </string>
+    <string name="eta">और:</string>
+    <string name="total_cost">कुल लागत</string>
+    <string name="rupee">&#8377;</string>
+    <string name="trip_ID">ट्रिप आईडी</string>
+    <string name="select">चुनते हैं</string>
+    <string name="Comments_Questions">टिप्पणियां / प्रश्न</string>
+    <string name="please_explain_your_issue_here">कृपया यहां अपने मुद्दों की व्याख्या करें ...</string>
+    <string name="Upload_a_picture">एक तस्वीर अपलोड करें (वैकल्पिक)</string>
+    <string name="email">ईमेल</string>
+    <string name="phone">फ़ोन</string>
+    <string name="truck_type">ट्रक का प्रकार</string>
+    <string name="pick_up_date">तारीख ले लो</string>
+    <string name="enter_origin">उत्पत्ति दर्ज करें</string>
+    <string name="enter_destination">गंतव्य दर्ज करें</string>
+    <string name="status">स्थिति</string>
+    <string name="report_issue">समस्या की रिपोर्ट करें</string>
+
+    <!--Contact Us-->
+    <string name="call_us">हमें कॉल करें : </string>
+    <string name="email_us">हमे ईमेल करे : </string>
+    <string name="website">वेबसाइट : </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="terms_amp_condition">नियम एवं शर्तें></string>
+    <string name="drive_with_us">हमारे साथ ड्राइव करें</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="history">इतिहास</string>
+    <string name="to_teach_destination">गंतव्य तक पहुंचने के लिए</string>
+
+    <string name="default_notification_channel_id">Su Drives</string>
+    <string name="any_comment">टिप्पणी</string>
+    <string name="no_data_found">कोई डेटा नहीं मिला</string>
+    <string name="decline_request_reson">कृपया कारण का चयन करें</string>
+    <string name="online_payment">ऑनलाइन भुगतान</string>
+    <string name="fare_summary">किराया सारांश</string>
+    <string name="decline_request">अनुरोध अस्वीकार करें</string>
+    <string name="business_usage">व्यापार उपयोग</string>
+    <string name="personal_usage">व्यक्तिगत उपयोग</string>
+    <string name="notifications">सूचनाएं</string>
+
+
+    <!--accept popup-->
+    <string name="accept">स्वीकार करना</string>
+    <string name="street">सड़क</string>
+    <string name="name">नाम</string>
+    <string name="collect_payment_at_pickup_location_">पिकअप स्थान पर भुगतान ले लीजिए</string>
+
+
+    <!--Common-->
+    <string name="discription">विवरण</string>
+    <string name="ok">ठीक</string>
+    <string name="terms_and_condotion">नियम एवं शर्तें></string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="message">संदेश</string>
+    <string name="user_cancel_booking">उपयोगकर्ता बुकिंग रद्द करें</string>
+    <string name="are_you_sure_you_want_to_exit">क्या आप निश्चित हैं आपकी बाहर निकलने की इच्छा है?</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="today">आज |</string>
+    <string name="please_fill_email_address">ईमेल एड्रेस भरें</string>
+    <string name="enter_valid_email">मान्य ईमेल दर्ज करें</string>
+    <string name="please_fill_name">कृपया नाम भरें</string>
+    <string name="_trip">\n यात्रा</string>
+    <string name="_years">\n वर्षों</string>
+    <string name="no_booking_found">कोई बुकिंग नहीं मिली</string>
+    <string name="please_select_reason">कृपया कारण का चयन करें</string>
+    <string name="please_enter_comment">कृपया टिप्पणी दर्ज करें</string>
+    <string name="accepted">स्वीकार किए जाते हैं</string>
+    <string name="trip_start">यात्रा शुरू करें</string>
+    <string name="completed">पूरा कर लिया है</string>
+    <string name="cancelled">रद्द</string>
+    <string name="processed">प्रसंस्कृत</string>
+    <string name="pending">अपूर्ण</string>
+    <string name="trip_time">यात्रा समय</string>
+    <string name="earning_details">कमाई विवरण</string>
+    <string name="awesome_movecab">बहुत बढ़िया Su Drives!</string>
+    <string name="done">किया हुआ</string>
+    <string name="earnings">कमाई</string>
+    <string name="arrived_at_pickup_location">पिकअप स्थान पर पहुंचे</string>
+    <string name="trip">यात्रा</string>
+    <string name="year">साल</string>
+    <string name="hin">Hin</string>
+    <string name="are_you_sure_you_want_to_go_online">क्या आप वाकई ऑनलाइन जाना चाहते हैं?</string>
+    <string name="are_you_sure_you_want_to_go_offline">क्या आप वाकई ऑफ़लाइन जाना चाहते हैं?</string>
+    <string name="are_you_sure_you_want_to_cancel_booking">क्या आप वाकई बुकिंग रद्द करना चाहते हैं?</string>
+    <string name="are_you_sure_you_reach_at_pickup_location">क्या आप वाकई पिकअप स्थान पर पहुंचते हैं?</string>
+    <string name="are_you_sure_you_want_to_start_trip">क्या आप वाकई यात्रा शुरू करना चाहते हैं?</string>
+    <string name="are_you_sure_you_want_to_end_trip">क्या आप वाकई यात्रा करना चाहते हैं?</string>
+    <string name="share_your_experience">अपना अनुभव साझा करें</string>
+    <string name="share_your_trip_experience_with_us">हमारे साथ अपने यात्रा अनुभव साझा करें!</string>
+    <string name="rate_the_user">उपयोगकर्ता को रेट करें</string>
+    <string name="tell_us_something">हमें कुछ बताओ!</string>
+    <string name="error_please_rate_user">कृपया उपयोगकर्ता को रेट करें</string>
+    <string name="you_want_to_upload_bilty_slip">आप bilty पर्ची अपलोड करना चाहते हैं?</string>
+    <string name="description">विवरण</string>
+    <string name="report_issue_summary">रिपोर्ट सारांश रिपोर्ट</string>
+
+    <string name="weekly">साप्ताहिक</string>
+    <string name="daily">रोज</string>
+    <string name="month">महीने के</string>
+    <string name="all">सब</string>
+    <string name="okay">ठीक है</string>
+
+    <string name="mobile_number">मोबाइल नंबर</string>
+    <string name="email_address">ईमेल पता</string>
+    <string name="vehicletype">गाड़ी का प्रकार</string>
+    <string name="here">यहाँ</string>
+    <string name="selecr_reason">कारण का चयन करें</string>
+    <string name="loading_map">मानचित्र लोड हो रहा है</string>
+    <string name="email_optional">ईमेल (वैकल्पिक)</string>
+    <string name="change_application_language">आवेदन भाषा बदलें</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="hindi">हिंदी</string>
+    <string name="are_you_sure_you_want_to_logout">क्या आप लॉग आउट करना चाहते हैं?</string>
+    <string name="session_expire">सत्र अभियान</string>
+    <string name="please_log_in_again">आपका वर्तमान सत्र समाप्त हो गया है, कृपया ऐप का आनंद लेने के लिए फिर से लॉग इन करें</string>
+    <string name="are_your_sure_you_want_to_exit">क्या आप निश्चित हैं आपकी बाहर निकलने की इच्छा है?</string>
+    <string name="clear_all">सभी साफ करें</string>
+    <string name="select_vehicle_name">गाड़ी का नाम</string>
+    <string name="error_please_add_vehicle_name">कृपया गाड़ी का नाम जोड़ें</string>
+    <string name="error_please_select_vehicle_name">कृपया गाड़ी का नाम चुनें</string>
+
+    <string name="donate">दान करना</string>
+    <string name="error_donate_amount">दान करने के लिए राशि दर्ज करें</string>
+    <string name="did_you_want_to_begin_trip_if_yes_please_enter_otp_to_verify">क्या आप यात्रा शुरू करना चाहते थे, यदि हां कृपया सत्यापित करने के लिए ओटीपी दर्ज करें</string>
+    <string name="call">कॉल</string>
+
+
+    <string name="booking_ID">बुकिंग आईडी</string>
+    <string name="i_ve_arrived">मैं पहूंच गया हूं</string>
+    <string name="payment_has_been_made_by_the_passenger_click_ok_to_continue_time_of_ride">भुगतान यात्री द्वारा किया गया है। जारी रखने के लिए ठीक क्लिक करें।</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">हैलो रिक्त टुकड़ा</string>
+    <string name="drop_off_as_directed">ड्रॉप ऑफ: निर्देशित के रूप में</string>
+    <string name="donation_amount_cannot_more_than_paid_amount">दान राशि भुगतान राशि से अधिक नहीं हो सकती है</string>
+    <string name="are_you_sure_you_have_arrived_at_the_pick_up">क्या आप वाकई पिकअप \ nlocation पर \ narrived किया है? यदि आप जारी रखने के लिए जारी रखते हैं, तो अंत में लेने के लिए \ nndirections.</string>
+    <string name="continues">जारी रहना</string>
+    <string name="continues1">आगे बढ़े</string>
+    <string name="full_name">पूरा नाम</string>
+    <string name="car_type">कार प्रकार</string>
+    <string name="price">मूल्य:</string>
+    <string name="no_record_found">कोई रिकॉर्ड नहीं मिला</string>
+    <string name="donation_Amount">दान की राशि</string>
+
+    <string name="driver_as_a_daily">ड्राइवर के रूप में एक दैनिक</string>
+    <string name="driver_as_a_rental">किराये के रूप में ड्राइवर</string>
+    <string name="driver_as_a_outstation">एक बाहरी व्यक्ति के रूप में ड्राइवर</string>
+    <string name="select_service">सेवा का चयन करें</string>
+    <string name="please_select_at_least_one_service">कृपया कम से कम एक सेवा का चयन करें</string>
+
+    <string name="location_updated">स्थान अपडेट किया गया: %1$s</string>
+
+    <string name="pickup">पिक अप</string>
+    <string name="destination">गंतव्य</string>
+    <string name="go">जाओ</string>
+
+    <string name="permit">परमिट</string>
+    <string name="insurance">बीमा</string>
+    <string name="fitness_certificate">फिटनेस प्रमाणपत्र</string>
+    <string name="error_please_upload_fitness">कृपया फिटनेस प्रमाणपत्र अपलोड करें</string>
+    <string name="error_please_upload_insurance">कृपया बीमा अपलोड करें</string>
+    <string name="error_please_upload_permit">कृपया पर्मिट कॉपी अपलोड करें</string>
+
+
+    <string name="error_please_upload_profile">कृपया प्रोफ़ाइल चित्र अपलोड करें</string>
+
+    <string name="current">वर्तमान</string>
+    <string name="estimated_trip_amount">अनुमानित यात्रा राशि</string>
+    <string name="skip">छोड़ें</string>
+
+    <string name="title_activity_upload_document">UploadDocumentActivity</string>
+    <string name="or">या</string>
+
+    <string name="select_state">राज्य चुनें</string>
+    <string name="select_city">शहर चुनें</string>
+
+    <string name="please_select_state">कृपया राज्य चुनें</string>
+    <string name="please_select_city">कृपया शहर चुनें</string>
+
+    <string name="select_or_search_state">राज्य चुनें या खोजें</string>
+    <string name="select_or_search_city">शहर चुनें या खोजें</string>
+
+    <string name="traffic_area">यातायात क्षेत्र</string>
+    <string name="title_activity_traffic_area">नक्शा</string>
+    <string name="title_update">आवेदन अद्यतन !!!</string>
+    <string name="change_mode_to_driver">ड्राइवर के लिए मोड बदलें</string>
+    <string name="send_sms_again_in">फिर से एसएमएस भेजें </string>
+    <string name="sec">सेकंड में</string>
+    <string name="install_app">एप्लिकेशन इंस्टॉल करें</string>
+    <string name="install">इंस्टॉल करें I</string>
+    <string name="app_is_not_currently_installed">वर्तमान में ऐप इंस्टॉल नहीं है,\nक्या आप इसे इंस्टॉल करना चाहेंगे?</string>
+
+    <string name="update">अपडेट करें</string>
+    <string name="action_cancel">रद करे</string>
+    <string name="choose_language">भाषा चुनें</string>
+    <string name="you_can_chnage_the_languge_later_from_menu_section">आप बाद में \'मेनू\' अनुभाग से भाषा को बदल सकते हैं</string>
+
+    //new string added
+    <string name="ride_string">सवारी - </string>
+    <string name="amount_String">रकम - </string>
+    <string name="wrong_otp_entered">सत्यापन कोड गलत है</string>
+    <string name="pollution">प्रदूषण</string>
+    <string name="road_tax">रोड टैक्स</string>
+    <string name="wallet">My Wallet</string>
+</resources>

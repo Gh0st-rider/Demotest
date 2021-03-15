@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@color/white"
+    android:paddingEnd="5dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="5dp"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:src="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_20"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="1dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nav_header_title"
+            android:fontFamily="@font/proximanova_regular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/proximanova_regular"
+            android:layout_marginTop="@dimen/margin_5"
+            android:textColor="@color/black"
+            android:text="John@example.com"
+            android:textSize="@dimen/text_12" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

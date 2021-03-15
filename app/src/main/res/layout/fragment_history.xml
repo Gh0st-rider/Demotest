@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HistoryFragment">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_history_list"
+        android:padding="@dimen/padding_10"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+    <TextView
+
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_norecordfound"
+        android:fontFamily="@font/proximanova_regular"
+        android:layout_centerInParent="true"
+        android:text="@string/no_booking_found"
+        android:textColor="@color/text_color"
+        android:visibility="gone"
+
+        />
+
+
+</FrameLayout>

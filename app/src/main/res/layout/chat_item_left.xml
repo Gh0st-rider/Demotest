@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/margin_250"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/margin_30"
+        android:layout_height="@dimen/margin_30"
+        android:src="@mipmap/ic_launcher" />
+
+
+
+    <TextView
+        android:id="@+id/show_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/profile_image"
+        android:background="@drawable/background_left"
+        android:lineSpacingExtra="2dp"
+        android:paddingStart="@dimen/margin_15"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingEnd="@dimen/margin_15"
+        android:paddingBottom="@dimen/margin_8"
+        android:text="Hi, How are you?"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_10" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_below="@id/show_message"
+        android:layout_toEndOf="@+id/profile_image"
+        android:text=""
+        android:textColor="@color/quantum_grey"
+        android:textSize="@dimen/padding_6" />
+
+</RelativeLayout>
