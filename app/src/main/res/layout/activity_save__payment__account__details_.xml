@@ -9,220 +9,241 @@
 
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:id="@+id/appBar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/AppTheme.AppBarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/AppTheme.AppBarOverlay">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/toolbar"
-            app:title="Account Details/Cashout"
-            app:titleTextColor="@color/black"
             android:background="@color/white"
-            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Account Details/Cashout"
+            app:titleTextColor="@color/black" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_ride_earned"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/card_ride_earned"
-        app:layout_constraintTop_toBottomOf="@+id/appBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="@dimen/margin_10"
         app:cardUseCompatPadding="true"
-        app:cardCornerRadius="@dimen/margin_10">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/const_data"
             android:layout_width="match_parent"
-            android:padding="@dimen/margin_10"
-            android:id="@+id/const_data">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
 
             <TextView
+                android:id="@+id/tv_ride"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_ride"
+                android:fontFamily="@font/montserrat_semibold"
                 android:text="Ride Details: "
                 android:textColor="@color/black"
                 android:textSize="@dimen/_10sdp"
-                android:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+
                 />
 
             <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                app:layout_constraintWidth_percent="0.3"
-                app:layout_constraintTop_toBottomOf="@+id/tv_ride"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="@dimen/_10sdp"
                 android:id="@+id/ll_online"
-                android:orientation="vertical">
-            <ImageView
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:src="@drawable/ic_cashless_payment"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/iv_onlinepicks"/>
-
-            <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:id="@+id/totalOnlinePickup"
-                android:text="online: 10"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/margin_10"
-                android:textSize="@dimen/_10sdp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:textColor="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/tv_ride"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                />
-                <TextView
-                    android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ride">
+
+                <ImageView
+                    android:id="@+id/iv_onlinepicks"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_cashless_payment" />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:id="@+id/totalonlinepayment"
-                    app:layout_constraintTop_toBottomOf="@id/tv_ride"
-                    android:textSize="@dimen/_10sdp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:textColor="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:text="500"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/margin_10"
-                    />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/totalOnlinePickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="online: 10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_ride" />
+
+                    <TextView
+                        android:id="@+id/totalonlinepayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="500"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_ride" />
+                </LinearLayout>
             </LinearLayout>
 
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5"
+                android:layout_marginTop="@dimen/_10sdp"/>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:id="@+id/ll_cash"
-                app:layout_constraintWidth_percent="0.3"
-                android:layout_marginTop="@dimen/_10sdp"
-
-                app:layout_constraintStart_toEndOf="@+id/ll_online"
-                app:layout_constraintTop_toBottomOf="@+id/tv_ride"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_width="@dimen/_40sdp"
-                    android:id="@+id/iv_cash"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/cash_payment"/>
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_cashpaickups"
-                android:text="Total cash pickups: 20"
-                android:textSize="@dimen/_10sdp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_7sdp"
-                android:textColor="@color/black"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/montserrat_semibold"
-                app:layout_constraintTop_toBottomOf="@+id/totalonlinepayment"
-                app:layout_constraintStart_toStartOf="parent"/>
-                <TextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_online">
+
+                <ImageView
+                    android:id="@+id/iv_cash"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/cash_payment" />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/totalcashpayment"
-                    app:layout_constraintTop_toBottomOf="@+id/totalonlinepayment"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_7sdp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:textColor="@color/black"
-                    android:text="1500"
-                    />
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_cashpaickups"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="center_horizontal"
+                        android:text="Total cash pickups: 20"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/totalonlinepayment" />
+
+                    <TextView
+                        android:id="@+id/totalcashpayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="1500"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/totalonlinepayment" />
+                </LinearLayout>
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5"
+                android:layout_marginTop="@dimen/_10sdp"/>
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:id="@+id/price_break"
-                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-
-                app:layout_constraintTop_toBottomOf="@+id/tv_ride"
-                app:layout_constraintStart_toEndOf="@+id/ll_cash">
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_cash">
 
 
                 <ImageView
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_width="@dimen/_40sdp"
                     android:id="@+id/iv_earned"
-                    android:src="@drawable/ic_price_tag"
-                    android:layout_gravity="center_horizontal"/>
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_price_tag" />
 
+                <LinearLayout
+                    android:id="@+id/ll_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/totalcashpayment"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="total earned"
-                android:textSize="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_7sdp"
-                android:fontFamily="@font/montserrat_medium"
+                    <TextView
+                        android:id="@+id/tv_totalearned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="total earned"
+                        android:textColor="@color/black"
 
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/black"
-                android:id="@+id/tv_totalearned"
-                />
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/totalcashpayment" />
 
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/tv_totalearned"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="commision admin"
+                    <TextView
+                        android:id="@+id/commisionadmin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
 
-                android:layout_marginTop="@dimen/_7sdp"
-                android:textSize="@dimen/_10sdp"
-                android:fontFamily="@font/montserrat_medium"
-                android:textColor="@color/black"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/commisionadmin"/>
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="commision admin"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_totalearned" />
 
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/commisionadmin"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="Due from admin"
-                android:textSize="@dimen/_10sdp"
+                    <TextView
+                        android:id="@+id/admin_due"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
 
-                android:layout_marginTop="@dimen/_7sdp"
-                android:fontFamily="@font/montserrat_medium"
-                android:textColor="@color/black"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/admin_due"/>
+                        android:text="Due from admin"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/commisionadmin" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/admin_due"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_10sdp"
+                    <TextView
+                        android:id="@+id/driver_earned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
 
-                android:layout_marginTop="@dimen/_7sdp"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="total earned driver"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/driver_earned"/>
+                        android:text="total earned driver"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/admin_due" />
+                </LinearLayout>
             </LinearLayout>
 
 
@@ -232,155 +253,162 @@
                 android:id="@+id/totalofflinepickups"
                 android:text="">-->
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
 
     <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:id="@+id/cashout_payment"
-        app:layout_constraintTop_toBottomOf="@+id/card_ride_earned"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_ride_earned">
 
         <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:padding="@dimen/margin_10"
             android:id="@+id/ll_account"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10">
+
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/check1"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
                 android:id="@+id/iv_account"
-                android:layout_marginStart="@dimen/margin_10"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/account_24dp"/>
+                android:layout_marginStart="@dimen/margin_10"
+                android:src="@drawable/account_24dp" />
 
             <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
                 android:id="@+id/tv_account"
-                android:textSize="@dimen/_10sdp"
-                android:fontFamily="@font/montserrat_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/margin_20"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="account"
                 android:textColor="@color/black"
-                android:text="account"/>
+                android:textSize="@dimen/_10sdp" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#e5e5e5"/>
+            android:background="#e5e5e5" />
 
 
         <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:padding="@dimen/margin_10"
             android:id="@+id/ll_paytm"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10">
+
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/check2"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <ImageView
+                android:id="@+id/iv_paytm"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:id="@+id/iv_paytm"
-                android:layout_marginStart="@dimen/margin_10"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/paytm"/>
+                android:layout_marginStart="@dimen/margin_10"
+                android:src="@drawable/paytm" />
 
             <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
                 android:id="@+id/tv_paytm"
-                android:textSize="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:fontFamily="@font/montserrat_semibold"
                 android:layout_marginStart="@dimen/margin_20"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Paytm"
                 android:textColor="@color/black"
-                android:text="Paytm"/>
+                android:textSize="@dimen/_10sdp" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#e5e5e5"/>
+            android:background="#e5e5e5" />
 
         <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:padding="@dimen/margin_10"
             android:id="@+id/ll_upi"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10">
+
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/check3"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <ImageView
+                android:id="@+id/iv_upi"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:id="@+id/iv_upi"
-                android:layout_marginStart="@dimen/margin_10"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/bhim"/>
+                android:layout_marginStart="@dimen/margin_10"
+                android:src="@drawable/bhim" />
 
             <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
                 android:id="@+id/tv_upi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/margin_20"
-                android:textColor="@color/black"
                 android:ellipsize="end"
                 android:fontFamily="@font/montserrat_semibold"
-                android:textSize="@dimen/_10sdp"
-                android:maxEms="6"
                 android:lines="1"
-                android:text="upi"/>
+                android:maxEms="6"
+                android:text="upi"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#e5e5e5"/>
+            android:background="#e5e5e5" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_cashout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
     </LinearLayout>
 
     <Button
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:id="@+id/btn_cashout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/rounded_corner_shape_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_10"
-        android:text="Request cashout"
-        android:textColor="@color/white"
+        android:background="@drawable/rounded_corner_shape_grey"
         android:enabled="false"
-        android:textSize="@dimen/_12sdp"
         android:fontFamily="@font/montserrat_semibold"
-        android:textAllCaps="false"/>
-
+        android:text="Request cashout"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

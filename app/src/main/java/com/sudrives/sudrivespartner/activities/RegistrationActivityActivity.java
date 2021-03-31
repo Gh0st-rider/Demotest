@@ -210,8 +210,6 @@ public class RegistrationActivityActivity extends Activity implements View.OnCli
     @Override
     protected void onResume() {
         super.onResume();
-
-
     }
 
     private void checkLocationOnOff() {
@@ -485,7 +483,7 @@ public class RegistrationActivityActivity extends Activity implements View.OnCli
 
         if (getEtRegistrationFName().getText().toString().trim().isEmpty()) {
 
-            error.showAlert(getResources().getString(R.string.error_please_enter_first_name), ErrorLayout.MsgType.Error, true);
+            error.showAlert(getResources().getString(R.string.full_name), ErrorLayout.MsgType.Error, true);
 
             return;
 

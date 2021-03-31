@@ -6,6 +6,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.6.aar/2a71057b3ee98f6409250f9467d34d47/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.6.aar/2a71057b3ee98f6409250f9467d34d47/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.6.aar/2a71057b3ee98f6409250f9467d34d47/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.6.aar/4beaa95b480db40ec2723aaf0c66a296/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.6.aar/4beaa95b480db40ec2723aaf0c66a296/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/crashlytics-2.9.6.aar/4beaa95b480db40ec2723aaf0c66a296/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

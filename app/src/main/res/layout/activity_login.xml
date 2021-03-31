@@ -106,27 +106,48 @@
             card_view:layout_constraintEnd_toEndOf="parent"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/margin_50"
+            android:layout_height="@dimen/_35sdp"
             android:gravity="center"
             android:orientation="horizontal"
             android:id="@+id/ll_mob"
             card_view:layout_constraintBottom_toTopOf="@+id/btn_login">
 
 
-            <com.rilixtech.CountryCodePicker
+       <!--     <com.rilixtech.CountryCodePicker
                 android:id="@+id/ccp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 card_view:ccp_defaultCode="91"
-                card_view:ccp_enableHint="false" />
+                android:paddingStart="@dimen/_10sdp"
+                card_view:ccp_enableHint="false" />-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="@string/country_code"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/hintcolor" />
+
 
 
             <EditText
                 android:id="@+id/et_mobile_no"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_height="match_parent"
+
                 android:background="@null"
                 android:digits="1234567890"
                 android:fontFamily="@font/proximanova_regular"
@@ -135,6 +156,8 @@
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:maxLength="10"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_2sdp"
                 android:singleLine="true"
                 android:textColor="@color/black"
                 android:textColorHint="@color/placeholder" />

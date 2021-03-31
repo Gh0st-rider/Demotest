@@ -168,7 +168,7 @@ public class HomeMenuActivity extends AppCompatActivity
 
     // new text view added
     private TextView balance_amount, tv_plan_price, tv_start_date, tv_end_date, validity_subs;
-
+    CircleImageView userImagee;
 
 
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -1792,6 +1792,7 @@ public class HomeMenuActivity extends AppCompatActivity
                 break;
 
             case R.id.iv_notification:
+
             case R.id.toolbarOptionNotification:
                 startActivity(new Intent(this, NotificationActivity.class));
                 break;
@@ -2053,7 +2054,14 @@ public class HomeMenuActivity extends AppCompatActivity
             tv_accept_popup_userName = view.findViewById(R.id.tv_accept_popup_userName);
             tv_accept_popup_time = view.findViewById(R.id.tv_accept_popup_time);
             tv_accept_popup_collect = view.findViewById(R.id.tv_accept_popup_collect);
+            userImagee = view.findViewById(R.id.userImagee);
+            tv_accept_popup_collect.setText("Payment Mode: "+mAcceptTrip.getResult().getPayment_mode());
+            Glide.with(this)
+                    .load(mAcceptTrip.getResult().getUser_details().getProfile_img())
+                  .into(userImagee);
 
+
+            Log.e("userImage", mAcceptTrip.getResult().getUser_details().getProfile_img());
 
             tv_accept_popup_pickupLocation.setText(mAcceptTrip.getResult().getBook_from_address());
             tv_accept_popup_dropLocation.setText(mAcceptTrip.getResult().getBook_to_address());
@@ -2068,7 +2076,7 @@ public class HomeMenuActivity extends AppCompatActivity
             tv_accept_popup_time.setText(mAcceptTrip.getResult().getEta());
 
 
-            tv_accept_popup_collect.setText(getResources().getString(R.string.rupee) + " " + mAcceptTrip.getResult().getTotal_fare() + " " + getResources().getString(R.string.estimated_trip_amount));
+            //tv_accept_popup_collect.setText(getResources().getString(R.string.rupee) + " " + mAcceptTrip.getResult().getTotal_fare() + " " + getResources().getString(R.string.estimated_trip_amount));
 
 
             if (mAcceptTrip.getResult().getType_of_booking() != null) {

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Su-Drives-Partner-develop_shashank.iml" filepath="$PROJECT_DIR$/.idea/modules/Su-Drives-Partner-develop_shashank.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Su-Drives-Partner-develop_shashank.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Su-Drives-Partner-develop_shashank.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/Su-Drives-Partner-develop_shashank.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/Su-Drives-Partner-develop_shashank.library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SuDrives_Partner.iml" filepath="$PROJECT_DIR$/.idea/modules/SuDrives_Partner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SuDrives_Partner.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SuDrives_Partner.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/SuDrives_Partner.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/SuDrives_Partner.library.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>

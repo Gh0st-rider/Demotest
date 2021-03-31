@@ -6,6 +6,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fabric-1.4.5.aar/77eefb5068e9867c7807a6339dfa1017/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fabric-1.4.5.aar/77eefb5068e9867c7807a6339dfa1017/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fabric-1.4.5.aar/77eefb5068e9867c7807a6339dfa1017/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fabric-1.4.5.aar/5ed357dced02bc7c52b3a6ee35c1a802/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fabric-1.4.5.aar/5ed357dced02bc7c52b3a6ee35c1a802/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fabric-1.4.5.aar/5ed357dced02bc7c52b3a6ee35c1a802/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

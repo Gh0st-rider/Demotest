@@ -180,8 +180,17 @@ public class AcceptTrip implements Serializable {
         private String trip_time;
         private String payment_responce_data;
         private String type_of_booking;
+        private String payment_mode;
 
-       // private DriverDetailsBean driver_details;
+        public String getPayment_mode() {
+            return payment_mode;
+        }
+
+        public void setPayment_mode(String payment_mode) {
+            this.payment_mode = payment_mode;
+        }
+
+        // private DriverDetailsBean driver_details;
         private UserDetailsBean user_details;
         private List<TripPathBean> trip_path;
 

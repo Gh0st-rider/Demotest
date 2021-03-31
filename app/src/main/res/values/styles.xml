@@ -158,4 +158,12 @@
             <item name="android:background">#ff0000</item>
         </style>
 
+    <style name="myFullscreenAlertDialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+
+
 </resources>

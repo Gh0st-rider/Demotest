@@ -3,6 +3,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ll_acceptPopup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -108,10 +109,12 @@
         android:id="@+id/donut_accept_popup_progress"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottoma"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+
         android:backgroundTint="@color/red_error_color"
         android:backgroundTintMode="add"
         custom:donut_finished_color="@color/red_error_color"
@@ -136,6 +139,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_10"
+        android:id="@+id/ll_bottoma"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/colorPrimary"
@@ -246,12 +250,25 @@
                     android:padding="@dimen/padding_10"
                     android:weightSum="1">
 
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_width="@dimen/_40sdp"
+                        android:id="@+id/userImagee"
+                        android:src="@color/placeholder"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linearuser"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
                     <TextView
 
                         android:id="@+id/tv_accept_popup_userName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:layout_marginStart="@dimen/margin_10"
                         android:textColor="@color/white"
                         android:layout_marginEnd="@dimen/margin_10"
@@ -259,6 +276,8 @@
                         android:text="@string/name"
                         android:textSize="@dimen/text_14" />
 
+
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -299,17 +318,16 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="@dimen/margin_5"
-                    android:gravity="center"
+                    android:gravity="start"
                     android:orientation="horizontal"
 
                     android:padding="@dimen/padding_10">
 
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/collectons"
-                        android:visibility="gone" />
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:background="@drawable/cash_payment" />
 
 
                     <TextView
@@ -318,6 +336,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_5"
                         android:textColor="@color/white"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_gravity="center_vertical"
                         android:fontFamily="@font/proximanova_regular"
                         android:text="@string/collect_payment_at_pickup_location_"
                         android:textSize="@dimen/text_14" />

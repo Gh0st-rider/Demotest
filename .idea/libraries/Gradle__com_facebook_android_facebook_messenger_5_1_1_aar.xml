@@ -6,6 +6,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.1.1.aar/81de02d3b2dd23f38af559c1adff85af/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.1.1.aar/81de02d3b2dd23f38af559c1adff85af/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.1.1.aar/81de02d3b2dd23f38af559c1adff85af/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.1.1.aar/a444574273a715235a214c592af90cef/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.1.1.aar/a444574273a715235a214c592af90cef/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.1.1.aar/a444574273a715235a214c592af90cef/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-messenger/5.1.1/204e442aea1b47cd90921829e6831dd3744c26b2/facebook-messenger-5.1.1-javadoc.jar!/" />

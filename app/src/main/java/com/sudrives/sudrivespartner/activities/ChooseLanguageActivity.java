@@ -55,6 +55,14 @@ public class ChooseLanguageActivity extends AppCompatActivity implements View.On
         tv_title.setText(getString(R.string.choose_language));
         tv_select.setText(getString(R.string.you_can_chnage_the_languge_later_from_menu_section));
 
+        strLanguage ="en";
+        AppPreference.saveStringPref(ChooseLanguageActivity.this, AppPreference.KEY_LANGUAGE, AppConstants.KEY_VALUE_ENGLISH);
+        iv_english.setImageResource(R.drawable.ic_check_black_24dp);
+        iv_hindi.setImageResource(R.drawable.ic_check_white_24dp);
+        btn_continue.setBackgroundColor(getResources().getColor(R.color.dark_yellow));
+        btn_continue.setEnabled(true);
+        btn_continue.setClickable(true);
+
     }
 
     @Override

@@ -6,6 +6,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/databinding-runtime-3.2.1.aar/16f500e60b5e1b6ad0fd192c03aab7b5/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/databinding-runtime-3.2.1.aar/16f500e60b5e1b6ad0fd192c03aab7b5/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/databinding-runtime-3.2.1.aar/16f500e60b5e1b6ad0fd192c03aab7b5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/databinding-runtime-3.2.1.aar/a1bce0c2a3cf4f12a9dd7a35cb9b6607/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/databinding-runtime-3.2.1.aar/a1bce0c2a3cf4f12a9dd7a35cb9b6607/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/databinding-runtime-3.2.1.aar/a1bce0c2a3cf4f12a9dd7a35cb9b6607/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

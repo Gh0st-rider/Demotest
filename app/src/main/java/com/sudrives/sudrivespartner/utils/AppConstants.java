@@ -430,6 +430,8 @@ public class AppConstants {
     public static final  String API_FETCH_ACTIVE_SUBSCRIPTION = BASE_URL + "driver/fetch_drive_subscription_plan";
     public static final  String EVENT_FETCH_ACTIVE_SUBSCRIPTION = "driver/fetch_drive_subscription_plan";
 
-
+    //get cashout list
+    public static final  String API_FETCH_CASHOUT_REQ = BASE_URL + "driver/driver_coshout_list";
+    public static final  String EVENT_API_FETCH_CASHOUT_REQ = "driver/driver_coshout_list";
 
 }

@@ -8,6 +8,8 @@
       <module name="Su-Drives-Partner-develop_shashank.library" target="1.8" />
       <module name="SU_Drivers_Partner.app" target="1.8" />
       <module name="SU_Drivers_Partner.library" target="1.8" />
+      <module name="SuDrives_Partner.app" target="1.8" />
+      <module name="SuDrives_Partner.library" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

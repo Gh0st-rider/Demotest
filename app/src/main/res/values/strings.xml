@@ -280,7 +280,7 @@
     <string name="are_you_sure_you_have_arrived_at_the_pick_up">Are you sure you have \narrived at the pickup \nlocation? If you click continue, \ndirections to pick up end.</string>
     <string name="continues">Continue</string>
     <string name="continues1">Continue</string>
-    <string name="full_name">Full Name</string>
+    <string name="full_name">Please enter full name</string>
     <string name="car_type">Car Type</string>
     <string name="price">Price:</string>
     <string name="no_record_found">No Record Found</string>
@@ -349,9 +349,19 @@
     <!--//health status string-->
     <string name="health_check_heading">Health check</string>
     <string name="healthcheckdescription">There are three types of health status.</string>
-    <string name="greenstatusmean">Green status shows your car health is healthy and no need to check up for some time.</string>
-    <string name="yellowstatusmean">Yellow status shows you card need to check again from our nearest center</string>
-    <string name="redstatusmean">Red health status mean you missed our warning and now you rides will be blocked due to health checkup.</string>
+    <string name="greenstatusmean">Green status shows your car health is healthy \nand no need to check up for some time.</string>
+    <string name="yellowstatusmean">Yellow status shows you card need to check again \nfrom our nearest center</string>
+    <string name="redstatusmean">Red health status mean you missed our warning \nand now you rides will be blocked due to health \ncheckup.</string>
 
+
+    <string name="fare_detail">Fare Details</string>
+    <string name="ride_fare">Ride Fare :</string>
+    <string name="discount_price">Discount Price :</string>
+    <string name="not_available">Not Available</string>
+    <string name="sgst_tax">SGST :</string>
+    <string name="cgst_tax">CGST :</string>
+    <string name="total_charges">Total Charges :</string>
+
+    <string name="country_code">+91</string>
 
 </resources>

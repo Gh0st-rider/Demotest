@@ -98,6 +98,7 @@ import com.sudrives.sudrivespartner.utils.interfaces.ReportIssueClickListner;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -205,6 +206,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
     TextView chat_text;
 
      AlertDialog alertDialog3;
+    TextView bookings;
+
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -372,7 +377,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
         but_end_trip = mLayouView.findViewById(R.id.but_end_trip);
         ll_end_trip = mLayouView.findViewById(R.id.ll_end_trip);
         but_emer = mLayouView.findViewById(R.id.but_emer);
-
+        bookings = mLayouView.findViewById(R.id.bookings);
         but_emer.setOnClickListener(this);
         but_end_trip.setOnClickListener(this);
         but_bigin_trip.setOnClickListener(this);
@@ -430,6 +435,15 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
         tb_onlineOffline.setVisibility(View.GONE);
         layoutBottomSheet.setVisibility(View.GONE);
 
+        layoutBottomSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED)
+                    sheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                else if (sheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED)
+                    sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            }
+        });
         /**
          * bottom sheet state change listener
          * we are changing button text when sheet changed state
@@ -457,7 +471,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
                         break;
                 }
             }
-
             @Override
             public void onSlide(@NonNull View bottomSheet, float slideOffset) {
                 if (isAdded()) {
@@ -856,6 +869,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
                 break;
 
             case R.id.iv_healthStatus:
+
+
             case R.id.tv_status:
 
                 View view1 = this.getLayoutInflater().inflate(R.layout.easydiag_healthstatus, null);
@@ -863,7 +878,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
                 new EasyDialog(getActivity())
                         // .setLayoutResourceId(R.layout.layout_tip_content_horizontal)//layout resource id
                         .setLayout(view1)
-                        .setBackgroundColor(getActivity().getResources().getColor(R.color.background_color_black))
+                        .setBackgroundColor(getActivity().getResources().getColor(R.color.black))
                         // .setLocation(new location[])//point in screen
                         .setLocationByAttachedView(tv_status)
                         .setGravity(EasyDialog.GRAVITY_BOTTOM)
@@ -1437,7 +1452,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
 
                             mEndTripModel = new Gson().fromJson(json.toString(), EndTripModel.class);
 
-                            AppDialogs.fareSummeryPopup(getActivity(), getActivity().getResources().getString(R.string.rupee) + " " + mEndTripModel.getResult().getTotal_fare(), mEndTripModel.getResult().getTotal_distance(), mEndTripModel.getBooking_id(), MapsFragment.this, MapsFragment.this);
+                            AppDialogs.fareSummeryPopup(getActivity(), getActivity().getResources().getString(R.string.rupee) + " " + mEndTripModel.getResult().getTotal_fare(), mEndTripModel.getResult().getTotal_distance(), mEndTripModel.getBooking_id(),mEndTripModel.getResult().getIs_online_payment_accept(), MapsFragment.this, MapsFragment.this);
 
                         } else if (from.trim().equalsIgnoreCase(AppConstants.ON_RESPONSE_TRIP_START)) {
 
@@ -2250,6 +2265,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
 
                             Log.d("HistoryRecord","NoHistory");
                             //setNoRecordFound();
+
+                            bookings.setText("No booking Yet");
 
 
                         } else {

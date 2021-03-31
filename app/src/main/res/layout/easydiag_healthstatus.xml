@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="@dimen/margin_10"
+    android:orientation="vertical"
     android:background="@color/black">
 
 
@@ -29,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/healthcheckdescription"/>
 
+
     <ImageView
         android:layout_width="24dp"
         android:layout_height="24dp"
@@ -36,17 +38,15 @@
         android:src="@drawable/ic_petrol_station_healthy"
         app:layout_constraintTop_toBottomOf="@+id/desc"
         android:layout_marginTop="@dimen/margin_20"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/greenhealth"
+        android:layout_marginStart="@dimen/margin_10"
         android:textColor="@color/white"
         android:layout_marginTop="@dimen/margin_20"
-        android:layout_marginStart="@dimen/margin_10"
-        android:layout_marginEnd="@dimen/margin_10"
         app:layout_constraintTop_toBottomOf="@+id/desc"
         app:layout_constraintStart_toEndOf="@+id/iv_healthGreen"
         android:text="@string/greenstatusmean"/>
@@ -58,16 +58,14 @@
         android:layout_marginTop="@dimen/margin_10"
         android:src="@drawable/ic_petrol_station_warning"
         app:layout_constraintTop_toBottomOf="@+id/greenhealth"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/yellowhealth"
         android:textColor="@color/white"
-
         android:layout_marginTop="@dimen/margin_10"
-
         android:layout_marginStart="@dimen/margin_10"
         android:layout_marginEnd="@dimen/margin_10"
         app:layout_constraintTop_toBottomOf="@+id/greenhealth"
@@ -81,8 +79,7 @@
         android:layout_marginTop="@dimen/margin_10"
         android:src="@drawable/ic_petrol_station_unhealthy"
         app:layout_constraintTop_toBottomOf="@+id/yellowhealth"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -95,4 +92,6 @@
         app:layout_constraintTop_toBottomOf="@+id/yellowhealth"
         app:layout_constraintStart_toEndOf="@+id/iv_healthRed"
         android:text="@string/redstatusmean"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

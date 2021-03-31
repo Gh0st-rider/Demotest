@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <LinearLayout
@@ -167,19 +168,18 @@
                 </LinearLayout>
 
 
-                    <androidx.cardview.widget.CardView
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin_10"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
                         app:layout_constraintTop_toBottomOf="@+id/rel_image"
-
-                        app:contentPadding="@dimen/padding_10">
+                        android:background="@drawable/top_corners">
 
                         <LinearLayout
                             android:layout_width="match_parent"
+                            android:padding="@dimen/_10sdp"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
@@ -191,7 +191,6 @@
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
-
                                     android:layout_height="wrap_content"
                                     android:gravity="center_vertical"
                                     android:orientation="horizontal">
@@ -211,7 +210,6 @@
                                         android:background="@null"
                                         android:fontFamily="@font/proximanova_regular"
                                         android:hint="@string/vehical_number"
-
                                         android:inputType="text"
                                         android:maxLength="10"
                                         android:maxLines="1"
@@ -255,12 +253,9 @@
                                         android:background="@null"
                                         android:fontFamily="@font/proximanova_regular"
                                         android:hint="@string/location"
-
                                         android:inputType="textCapSentences|textNoSuggestions"
-
                                         android:maxLines="1"
                                         android:padding="@dimen/padding_5"
-
                                         android:singleLine="true"
                                         android:textSize="@dimen/text_15" />
 
@@ -278,13 +273,11 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/margin_15"
-
                                     android:gravity="center_vertical"
                                     android:orientation="horizontal">
 
                                     <ImageView
                                         android:layout_width="wrap_content"
-
                                         android:layout_height="wrap_content"
                                         android:src="@drawable/delivery_van" />
 
@@ -294,7 +287,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="@dimen/margin_10"
                                         android:layout_weight="1"
-
                                         android:fontFamily="@font/proximanova_regular" />
 
 
@@ -307,7 +299,6 @@
                                 <View
                                     android:layout_width="match_parent"
                                     android:layout_height="1dp"
-
                                     android:background="@color/placeholder" />
 
 
@@ -316,8 +307,7 @@
                                     android:layout_width="match_parent"
                                     android:id="@+id/const_multiple_opt"
                                     android:visibility="gone"
-                                    android:layout_marginTop="@dimen/margin_10"
-                                    >
+                                    android:layout_marginTop="@dimen/margin_10">
 
                                     <CheckBox
                                         android:layout_width="wrap_content"
@@ -868,7 +858,7 @@
 
 
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

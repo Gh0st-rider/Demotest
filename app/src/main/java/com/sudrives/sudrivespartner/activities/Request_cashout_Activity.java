@@ -6,6 +6,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -29,7 +31,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.gson.Gson;
 import com.sudrives.sudrivespartner.R;
+import com.sudrives.sudrivespartner.adapters.CashoutRequestListAdapter;
+import com.sudrives.sudrivespartner.adapters.SubscriptionPlanAdapter;
+import com.sudrives.sudrivespartner.models.cashourRequest.CashoutrequestModel;
+import com.sudrives.sudrivespartner.models.cashourRequest.Result;
+import com.sudrives.sudrivespartner.models.subscriptionPlans.SubscriptionPlansModel;
 import com.sudrives.sudrivespartner.networks.NetworkConn;
 import com.sudrives.sudrivespartner.utils.AppConstants;
 import com.sudrives.sudrivespartner.utils.AppDialogs;
@@ -40,7 +48,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import static com.sudrives.sudrivespartner.utils.AppPreference.KEY_USER_ID;
 
@@ -60,6 +70,9 @@ public class Request_cashout_Activity extends AppCompatActivity implements View.
 
     TextView totalOnlinePickup, totalonlinepayment, tv_cashpayment, totalcashpayment, tv_totalearned, commisionadmin, driver_earned, admindue;
 
+    RecyclerView rec_subs;
+    List<Result> cashoutrequestModelList = new ArrayList<>();
+    CashoutRequestListAdapter cashoutRequestListAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +111,9 @@ public class Request_cashout_Activity extends AppCompatActivity implements View.
         checkBox1.setOnClickListener(this);
         checkBox2.setOnClickListener(this);
         checkBox3.setOnClickListener(this);
+
+        rec_subs = findViewById(R.id.rec_cashout);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // showing the back button in action bar
@@ -105,9 +121,31 @@ public class Request_cashout_Activity extends AppCompatActivity implements View.
         fetchAccountDetails();
 
         getCashoutDeatils();
+        fetchCashoutRequests();
+
+    }
+
+    private void fetchCashoutRequests(){
+
+        try {
+            NetworkConn networkConn = NetworkConn.getInstance(this);
+
+            HashMap<String, String> hashMap = new HashMap<>();
+            hashMap.put("any","");
+            //  hashMap.put(AppConstants.KEY_USER_ID, AppPreference.loadStringPref(Request_cashout_Activity.this, KEY_USER_ID));
+
+            // Log.e("RequestCashout", "RequestCashout: " + AppConstants. + "  :: " + hashMap.toString());
+
+            networkConn.makeRequest(this, networkConn.createRawDataRequest(AppConstants.API_FETCH_CASHOUT_REQ, "" ), this, AppConstants.EVENT_API_FETCH_CASHOUT_REQ);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
     }
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -366,14 +404,14 @@ public class Request_cashout_Activity extends AppCompatActivity implements View.
                 String commision_fee_due_amount = jsonObject.getString("commision_fee_due_amount");
                 String commision_fee_pay_amount =jsonObject.getString("commision_fee_pay_amount");
 
-                totalonlinepayment.setText("online: "+rupeesymbol+online_booking_payment);
-                totalOnlinePickup.setText("online user: "+total_online_booking);
-                tv_cashpayment.setText("cash user: "+total_cash_booking);
-                totalcashpayment.setText("Cash: "+rupeesymbol+cash_booking_payment);
-                tv_totalearned.setText("Earned: "+rupeesymbol+total_booking_payment);
-                commisionadmin.setText("Due: "+rupeesymbol+commision_fee_due_amount);
-                driver_earned.setText("Total: "+rupeesymbol+driver_booking_amount);
-                admindue.setText("Admin due: "+rupeesymbol+commision_fee_pay_amount);
+                totalonlinepayment.setText("online payments: "+rupeesymbol+online_booking_payment);
+                totalOnlinePickup.setText("online rides: "+total_online_booking);
+                tv_cashpayment.setText("cash rides: "+total_cash_booking);
+                totalcashpayment.setText("Cash payments: "+rupeesymbol+cash_booking_payment);
+                tv_totalearned.setText("Total booking: "+rupeesymbol+total_booking_payment);
+                commisionadmin.setText("Driver to admin due: "+rupeesymbol+commision_fee_due_amount);
+                driver_earned.setText("Driver amount: "+rupeesymbol+driver_booking_amount);
+                //admindue.setText("Admin to driver due: "+rupeesymbol+commision_fee_pay_amount);
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -392,6 +430,15 @@ public class Request_cashout_Activity extends AppCompatActivity implements View.
             reqCashout.setBackground(ContextCompat.getDrawable(this, R.drawable.rounded_corner_shape_grey));
         }
 
+        if (strEventType.equalsIgnoreCase(AppConstants.EVENT_API_FETCH_CASHOUT_REQ)){
+
+            CashoutrequestModel cashoutrequestModel = new Gson().fromJson(response.toString(), CashoutrequestModel.class);
+            cashoutrequestModelList.addAll(cashoutrequestModel.getResult());
+            cashoutRequestListAdapter = new CashoutRequestListAdapter(cashoutrequestModelList,this);
+            rec_subs.setLayoutManager(new LinearLayoutManager(this));
+            rec_subs.setAdapter(cashoutRequestListAdapter);
+
+        }
 
 
     }

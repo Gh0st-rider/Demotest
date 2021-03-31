@@ -4,8 +4,13 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/checkout-1.6.6.aar/d4344c02ce06036917ea5728d5e4895b/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/checkout-1.6.6.aar/d4344c02ce06036917ea5728d5e4895b/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/checkout-1.6.6.aar/d4344c02ce06036917ea5728d5e4895b/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/checkout-1.6.6.aar/9532165b00366b79240297198778416a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/checkout-1.6.6.aar/9532165b00366b79240297198778416a/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/checkout-1.6.6.aar/9532165b00366b79240297198778416a/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.razorpay/checkout/1.6.6/772641c8514e72dd0ca07f44f96e5eabc92911e4/checkout-1.6.6-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.razorpay/checkout/1.6.6/113e9b8bb5cafddcad3a08914d6c41925a670c9a/checkout-1.6.6-sources.jar!/" />
     </SOURCES>

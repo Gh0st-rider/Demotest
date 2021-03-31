@@ -18,8 +18,11 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
 
@@ -42,12 +45,13 @@ import java.util.Locale;
 public class SplashActivity extends AppCompatActivity implements OnLocationUpdateListner, MediaPlayer.OnPreparedListener, NetworkConn.OnRequestResponse {
 
 
-    public final int TIMEOUT = 4000;
+    public final int TIMEOUT = 2000;
     private static final int INITIAL_REQUEST = 222;
     private Runnable runnable;
     private Handler handler;
     private AlertDialog alertDialog;
-
+    RelativeLayout rel_allow;
+    Button btn_permission;
 
     private String[] INITIAL_PERMS = new String[]{
             Manifest.permission.ACCESS_FINE_LOCATION,
@@ -127,6 +131,22 @@ public class SplashActivity extends AppCompatActivity implements OnLocationUpdat
 
       //  printHashKey(getApplicationContext());
 
+        rel_allow = findViewById(R.id.rel_allow);
+        btn_permission = findViewById(R.id.btn_permission);
+        btn_permission.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        Uri uri = Uri.fromParts("package", getPackageName(), null);
+                        intent.setData(uri);
+                        startActivity(intent);
+
+
+            }
+        });
+
     }
 
     @Override
@@ -149,13 +169,12 @@ public class SplashActivity extends AppCompatActivity implements OnLocationUpdat
 
     private void startCheckPermissions() {
 
-
-
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (!canAccessExternalStorage() || !canAccessCoarseLocation() &&!canAccessFineLocation()) {
                 Log.e("Ask Permission", "Ask Permission");
                 this.requestPermissions(INITIAL_PERMS, INITIAL_REQUEST);
+                //rel_allow.setVisibility(View.VISIBLE);
+
                 return;
             }
             setHandler();

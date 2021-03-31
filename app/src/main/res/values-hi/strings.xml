@@ -342,4 +342,7 @@
     <string name="pollution">प्रदूषण</string>
     <string name="road_tax">रोड टैक्स</string>
     <string name="wallet">My Wallet</string>
+
+    <string name="country_code">+91</string>
+
 </resources>

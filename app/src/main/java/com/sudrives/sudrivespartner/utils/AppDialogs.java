@@ -21,6 +21,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -44,6 +45,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class AppDialogs {
+
 
     public static Dialog dialog, networkDialogLoader;
 
@@ -427,7 +429,7 @@ public class AppDialogs {
 
     }//End...
 
-    public static void fareSummeryPopup(final Context mContext, final String price, final String distance, final String tripId, final OnOKButtonListener listener, final iOnDonateListner iOnDonateListner) {
+    public static void fareSummeryPopup(final Context mContext, final String price, final String distance, final String tripId,final String paymentMode, final OnOKButtonListener listener, final iOnDonateListner iOnDonateListner) {
 
 
         ((Activity) mContext).runOnUiThread(new Runnable() {
@@ -439,6 +441,7 @@ public class AppDialogs {
 
                 final EditText donateAmout;
                 Button donateButton;
+                LinearLayout llFareBreakup;
 
                 LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 View view = layoutInflater.inflate(R.layout.fare_summery, null);
@@ -446,7 +449,7 @@ public class AppDialogs {
                 tv_fare_summary_total_distance = view.findViewById(R.id.tv_fare_summary_total_distance);
                 tv_fare_summary_total_cost = view.findViewById(R.id.tv_fare_summary_total_cost);
                 btn_fare_summary_done = view.findViewById(R.id.btn_fare_summary_done);
-
+                llFareBreakup = view.findViewById(R.id.ll_fare_breakup);
                 donateAmout = view.findViewById(R.id.et_donate_amount);
                 donateButton = view.findViewById(R.id.bt_donate);
 
@@ -455,7 +458,16 @@ public class AppDialogs {
                 dialog.setContentView(view);
                 dialog.setCancelable(false);
 
-                tv_fare_summary_total_cost.setText(price);
+                if (paymentMode.equals("0")){
+
+                    tv_fare_summary_total_cost.setText(price);
+
+                }else {
+
+                    tv_fare_summary_total_cost.setText(mContext.getResources().getString(R.string.rupee)+" 0.00");
+
+                }
+
                 tv_fare_summary_total_distance.setText(mContext.getResources().getString(R.string.total_distance) + " : " + distance);
 
 
@@ -501,6 +513,27 @@ public class AppDialogs {
 
                     }
                 });
+
+
+                llFareBreakup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        androidx.appcompat.app.AlertDialog.Builder alertDialog = new androidx.appcompat.app.AlertDialog.Builder(mContext,R.style.myFullscreenAlertDialogStyle);
+                        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        View d = inflater.inflate(R.layout.popup_fare_details, null);
+                        alertDialog.setView(d);
+                        final androidx.appcompat.app.AlertDialog show = alertDialog.show();
+
+                        ImageView imgClose = d.findViewById(R.id.close_popup_fare_detail);
+                        imgClose.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                show.dismiss();
+                            }
+                        });
+                    }
+                });
+
 
 //                donateButton.setOnClickListener(new View.OnClickListener() {
 //                    @Override

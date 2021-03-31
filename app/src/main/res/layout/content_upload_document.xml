@@ -54,6 +54,8 @@
                 android:layout_marginTop="@dimen/margin_10"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -99,6 +101,8 @@
                 android:layout_marginTop="@dimen/margin_15"
                 android:gravity="center"
 
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -144,6 +148,8 @@
                 android:layout_marginTop="@dimen/margin_15"
                 android:gravity="center"
 
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -188,6 +194,8 @@
                 android:layout_marginTop="@dimen/margin_15"
                 android:gravity="center"
 
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -233,6 +241,8 @@
                 android:layout_marginTop="@dimen/margin_15"
                 android:gravity="center"
 
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -280,6 +290,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/margin_15"
                 android:gravity="center"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
 
                 android:orientation="horizontal">
 
@@ -325,6 +337,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/margin_15"
                 android:gravity="center"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
 
                 android:orientation="horizontal">
 
