@@ -23,6 +23,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 
@@ -62,7 +63,7 @@ public class SplashActivity extends AppCompatActivity implements OnLocationUpdat
     private LocationManager locationManager;
     private String from = "";
 
-
+    private  int permissionCount=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -284,6 +285,18 @@ public class SplashActivity extends AppCompatActivity implements OnLocationUpdat
                 if (grantResults != null && grantResults.length > 0) {
                     if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                         init();
+                    }else {
+                        permissionCount++;
+
+                        if (permissionCount == 3){
+                            permissionCount = 0;
+
+                            Intent i = new Intent(SplashActivity.this, PermissionsActivity.class);
+                            startActivity(i);
+
+                        }
+
+                       // Toast.makeText(getApplicationContext(), "permission results",Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -457,6 +470,7 @@ public class SplashActivity extends AppCompatActivity implements OnLocationUpdat
     }
 
     public static String getHashCode(Context context){
+
         AppSignatureHashHelper appSignature = new AppSignatureHashHelper(context);
         Log.e(" getAppSignatures ",""+appSignature.getAppSignatures());
         return appSignature.getAppSignatures().get(0);

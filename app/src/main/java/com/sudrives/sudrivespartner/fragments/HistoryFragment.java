@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -63,8 +64,11 @@ public class HistoryFragment extends Fragment implements NetworkConn.OnRequestRe
         super.onViewCreated(view, savedInstanceState);
 
         rvHistoryList = view.findViewById(R.id.rv_history_list);
+
         tv_norecordfound = view.findViewById(R.id.tv_norecordfound);
         resultBeans = new ArrayList<>();
+        rvHistoryList.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rvHistoryList.setNestedScrollingEnabled(false);
         bookingHistoryAdapter = new BookingHistoryAdapter(resultBeans, this, mContext);
 
         rvHistoryList.setAdapter(bookingHistoryAdapter);

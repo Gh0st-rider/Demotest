@@ -612,6 +612,9 @@ public class HomeMenuActivity extends AppCompatActivity
         if (title.trim().equalsIgnoreCase(getString(R.string.nav_report_issue))) {
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, fragment).addToBackStack(getString(R.string.nav_report_issue)).commit();
 
+        } else if (title.trim().equalsIgnoreCase(getString(R.string.nav_history))) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, fragment).addToBackStack(getString(R.string.nav_history)).commit();
+
         } else {
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, fragment).commit();
 

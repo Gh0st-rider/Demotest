@@ -7,7 +7,9 @@
     tools:context=".fragments.HistoryFragment">
 
 
-
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
     <androidx.recyclerview.widget.RecyclerView
 
         android:layout_width="match_parent"
@@ -16,7 +18,7 @@
         android:padding="@dimen/padding_10"
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-
+    </androidx.core.widget.NestedScrollView>
 
     <TextView
 

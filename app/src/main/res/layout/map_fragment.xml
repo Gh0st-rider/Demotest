@@ -376,13 +376,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <androidx.recyclerview.widget.RecyclerView
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:id="@+id/rec_recentbookings"
             android:background="#e5e5e5"
             />
+        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 

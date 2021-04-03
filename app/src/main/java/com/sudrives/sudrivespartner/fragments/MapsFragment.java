@@ -419,6 +419,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
         arrowright = mLayouView.findViewById(R.id.arrow_right);
         sheetBehavior = BottomSheetBehavior.from(layoutBottomSheet);
         rec_recentbookings = mLayouView.findViewById(R.id.rec_recentbookings);
+        rec_recentbookings.setNestedScrollingEnabled(false);
         rec_recentbookings.setLayoutManager(new LinearLayoutManager(getActivity()));
         resultBeans = new ArrayList<>();
         bookingHistoryAdapter = new BookingHistoryAdapter(resultBeans, this, getActivity());
