@@ -139,6 +139,8 @@ public class RegistrationActivityActivity extends Activity implements View.OnCli
     private boolean isInsurance;
     private boolean isPermit;
     private boolean isProfile;
+    CheckBox chk_terms_con;
+    TextView read_terms_con;
     AppDialogs appDialogs;
 
 
@@ -160,6 +162,9 @@ public class RegistrationActivityActivity extends Activity implements View.OnCli
 
         sp_city = findViewById(R.id.sp_city);
         sp_state = findViewById(R.id.sp_state);
+        chk_terms_con = findViewById(R.id.chk_terms);
+        read_terms_con = findViewById(R.id.read_terms_con);
+        read_terms_con.setOnClickListener(this);
 
         cb_driver_as_a_daily = findViewById(R.id.cb_driver_as_a_daily);
         cb_driver_as_a_rental = findViewById(R.id.cb_driver_as_a_rental);
@@ -179,6 +184,7 @@ public class RegistrationActivityActivity extends Activity implements View.OnCli
         tvFitenssCertificate = findViewById(R.id.tv_fitness_certificate);
         tvInsurance = findViewById(R.id.tv_insurance);
         tvPermit = findViewById(R.id.tv_permit);
+
 
         tvFitenssCertificate.setOnClickListener(this);
         tvInsurance.setOnClickListener(this);
@@ -465,8 +471,17 @@ public class RegistrationActivityActivity extends Activity implements View.OnCli
                 isPermit = true;
                 startCheckPermissions();
                 break;
+
+            case R.id.read_terms_con:
+
+                Intent i = new Intent(RegistrationActivityActivity.this, MainActivity.class);
+                i.putExtra("value", "https://sudrives.com/terms&condition.html");
+                startActivity(i);
+
+                break;
         }
     }
+
 
 
     private void checkValidation() {
@@ -613,7 +628,11 @@ public class RegistrationActivityActivity extends Activity implements View.OnCli
             return;
 
         }
+        if (!chk_terms_con.isChecked()) {
+            error.showAlert(getResources().getString(R.string.please_select_terms_and_con), ErrorLayout.MsgType.Error, true);
+            return;
 
+        }
 
         callVerificationAPI();
 

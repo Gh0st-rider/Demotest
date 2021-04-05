@@ -545,7 +545,9 @@ public class HomeMenuActivity extends AppCompatActivity
             case R.id.nav_contact_us:
                 //  goToPage(new ContactUsFragment(), getString(R.string.nav_contact_us));
 
-                startActivity(new Intent(this, ContactUsActivity.class));
+                Intent i2 = new Intent(HomeMenuActivity.this, MainActivity.class);
+                i2.putExtra("value", "https://sudrives.com/contactus.html");
+                startActivity(i2);
 
                 break;
 
@@ -553,7 +555,9 @@ public class HomeMenuActivity extends AppCompatActivity
                 //  goToPage(new AboutUsFragment(), getString(R.string.nav_about_us));
 
                 //startActivity(new Intent(this, AboutUsActivity.class));
-
+                Intent i1 = new Intent(HomeMenuActivity.this, MainActivity.class);
+                i1.putExtra("value", "https://sudrives.com/aboutus.html");
+                startActivity(i1);
                 break;
 
             case R.id.nav_logout:
@@ -703,7 +707,7 @@ public class HomeMenuActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
 
-
+        getActiveSubscription();
         AppConstants.KEY_CONTEXT = HomeMenuActivity.this;
 
         setBadgeCount(AppConstants.notificationCount);

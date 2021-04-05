@@ -64,9 +64,9 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
         holder.tvNotificationTime.setText(resultBean.getCreate_dt());
 
         if (resultBean.getRead_status().equals("0")) {
-            holder.itemView.setAlpha(.60f);
-        } else {
             holder.itemView.setAlpha(1.0f);
+        } else {
+            holder.itemView.setAlpha(.60f);
         }
     }
 

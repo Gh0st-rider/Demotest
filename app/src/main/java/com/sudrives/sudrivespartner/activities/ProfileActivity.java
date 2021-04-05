@@ -5,11 +5,13 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.net.Uri;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatRatingBar;
+import androidx.core.content.ContextCompat;
 
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
@@ -19,10 +21,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
 import com.sudrives.sudrivespartner.R;
 import com.sudrives.sudrivespartner.models.LoginModel;
@@ -34,6 +39,7 @@ import com.sudrives.sudrivespartner.utils.Image_Picker;
 import com.sudrives.sudrivespartner.utils.Validations;
 import com.theartofdev.edmodo.cropper.CropImage;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -61,12 +67,19 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private Image_Picker image_picker;
     private String imagePath = "";
     private ImageButton ib_profile;
-    private Button submit;
+    private Button submit, save_account_details;
     private CheckBox cb_driver_as_a_daily, cb_driver_as_a_rental, cb_driver_as_a_outstation;
 
     //changes for state name
-    private TextView tv_state_name,unique_id;
+    private TextView tv_state_name,unique_id, txt_add_account, txt_add_paytm, txt_add_upi;
     private String city, latitude, longitude, state;
+    //BottomSheet recent rides
+    LinearLayout ll_account;
+    LinearLayout account_details_l, account_details_view, ll_paytm, ll_upi;
+    View view2, view1;
+    TextView tv_account_title, tv_accountnumber, tv_paytmnumber, tv_upinumber;
+    TextInputEditText account_holder_name_ev, bank_name_ev, bank_ifsc_ev, account_number_ev, tie_upi, tie_paytm;
+    String id="", holdername="", bankname = "", ifsc= "", accountnumber="", image="", accounttype="", up_number="", paytmnumber="";
 
     public void setLocale(String lang) {
 
@@ -116,21 +129,40 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         submit.setOnClickListener(this);
         unique_id.setText(AppPreference.loadStringPref(this,AppPreference.KEY_UNIQUE_NUMBER));
         ib_profile.setVisibility(View.GONE);
-
+        account_details_view = findViewById(R.id.account_details_view);
         findViewById(R.id.ib_back).setOnClickListener(this);
 
         editButton = findViewById(R.id.ib_edit_icon);
-
+        view1 = findViewById(R.id.view1);
+        view2 = findViewById(R.id.view2);
         editButton.setOnClickListener(this);
+        ll_account = findViewById(R.id.ll_account);
+        ll_paytm = findViewById(R.id.ll_paytm);
+        ll_upi = findViewById(R.id.ll_upi);
+        txt_add_account = findViewById(R.id.txt_add_account);
+        txt_add_paytm = findViewById(R.id.txt_add_paytm);
+        txt_add_upi = findViewById(R.id.txt_add_upi);
+
+        txt_add_upi.setVisibility(View.GONE);
+        txt_add_paytm.setVisibility(View.GONE);
+        txt_add_account.setVisibility(View.GONE);
+
+        txt_add_account.setOnClickListener(this);
+        txt_add_paytm.setOnClickListener(this);
+        txt_add_upi.setOnClickListener(this);
 
         ivProfile.setOnClickListener(this);
         ib_profile.setOnClickListener(this);
 
+        tv_accountnumber = findViewById(R.id.tv_accountnumber);
+        tv_paytmnumber = findViewById(R.id.tv_paytmnumber);
+        tv_upinumber = findViewById(R.id.tv_upinumber);
+
         //
         tv_state_name.setEnabled(false);
         tv_state_name.setOnClickListener(this);
-
-
+        save_account_details = findViewById(R.id.save_account_details);
+        save_account_details.setOnClickListener(this);
         try {
             getProfileDetail();
         } catch (JSONException e) {
@@ -138,6 +170,19 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
 
         makeFieldUnEditable();
+
+
+        tv_account_title = findViewById(R.id.tv_account_title);
+        account_holder_name_ev = findViewById(R.id.account_holder_name_ev);
+        bank_name_ev = findViewById(R.id.bank_name_ev);
+        bank_ifsc_ev = findViewById(R.id.bank_ifsc_ev);
+        account_number_ev = findViewById(R.id.account_number_ev);
+        tie_upi = findViewById(R.id.tie_upi);
+        tie_paytm = findViewById(R.id.tie_paytm);
+        //bottom sheet definitions
+        fetchAccountDetails();
+
+
     }
 
     private EditText getEtName() {
@@ -174,6 +219,54 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.tv_state_name:
                 Intent i = new Intent(this, PlacePickerActivity.class);
                 startActivityForResult(i, 100);
+                break;
+
+            case R.id.txt_add_account:
+
+
+                    ll_account.setVisibility(View.VISIBLE);
+                    account_details_view.setVisibility(View.VISIBLE);
+                    ll_paytm.setVisibility(View.GONE);
+                    ll_upi.setVisibility(View.GONE);
+
+
+                break;
+
+            case R.id.txt_add_paytm:
+
+                    ll_account.setVisibility(View.VISIBLE);
+                    account_details_view.setVisibility(View.GONE);
+                    ll_paytm.setVisibility(View.VISIBLE);
+                    ll_upi.setVisibility(View.GONE);
+
+                break;
+
+            case R.id.txt_add_upi:
+
+                    ll_account.setVisibility(View.VISIBLE);
+                    account_details_view.setVisibility(View.GONE);
+                    ll_paytm.setVisibility(View.GONE);
+                    ll_upi.setVisibility(View.VISIBLE);
+
+                break;
+
+            case R.id.save_account_details:
+
+                if (ll_account.getVisibility()  == View.VISIBLE){
+                    if (account_details_view.getVisibility() == View.VISIBLE){
+                        saveAccountPayUpiDetails(account_holder_name_ev.getText().toString(), bank_name_ev.getText().toString(), bank_ifsc_ev.getText().toString(),account_number_ev.getText().toString(),"1","","");
+                    }
+                    if (ll_paytm.getVisibility() == View.VISIBLE){
+                        saveAccountPayUpiDetails("", "", "","","2","",tie_paytm.getText().toString());
+
+                    }
+
+                    if (ll_upi.getVisibility() == View.VISIBLE){
+                        saveAccountPayUpiDetails("", "", "","","3",tie_upi.getText().toString(),"");
+
+                    }
+                }
+
                 break;
         }
     }
@@ -231,6 +324,87 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 HomeMenuActivity.mOnClickRequestes.onSuccessfullOnclickRequest(AppConstants.KEY_VALUE_PROFILE_UPDATE);
 
             }
+
+
+            if (strEventType.equalsIgnoreCase(AppConstants.EVENT_SAVE_DRIVER_ACCOUNT_DETAILS)){
+
+                Log.e("account",response.toString());
+
+
+                if (response.optString("message").equalsIgnoreCase("Successfully")){
+                    ll_account.setVisibility(View.GONE);
+                    fetchAccountDetails();
+                }
+
+
+
+            }
+
+
+            if (strEventType.equalsIgnoreCase(AppConstants.EVENT_GET_DRIVER_ACCOUNT_DETAILS)){
+
+                Log.e("responseAccountdetails",response.toString());
+
+
+
+
+
+                    if (response.getString("status").equalsIgnoreCase("0")){
+
+                        txt_add_account.setText("+Add account");
+                        txt_add_paytm.setText("+Add paytm");
+                        txt_add_upi.setText("+Add upi");
+
+                    }else {
+
+                        JSONArray jsonArray = response.getJSONArray("result");
+                        JSONObject jsonObject = jsonArray.getJSONObject(0);
+                        id = jsonObject.optString("id");
+                        holdername = jsonObject.optString("holdername");
+                        bankname= jsonObject.optString("bankname");
+                        ifsc = jsonObject.optString("ifsc");
+                        accountnumber = jsonObject.optString("accountnumber");
+                        accounttype = jsonObject.optString("account_type");
+                        up_number = jsonObject.optString("up_number");
+                        paytmnumber = jsonObject.optString("paytm_number");
+                        Log.e("textpay",paytmnumber);
+                        if (up_number.isEmpty() || up_number.equalsIgnoreCase("null")){
+                            txt_add_upi.setText("+Add upi");
+
+                        }else {
+                            txt_add_upi.setVisibility(View.VISIBLE);
+                            tv_upinumber.setVisibility(View.VISIBLE);
+                            txt_add_upi.setTextColor(ContextCompat.getColor(ProfileActivity.this, R.color.black));
+                            txt_add_upi.setText(up_number);
+                            tie_upi.setText(up_number);
+                        }
+                        if (paytmnumber.isEmpty() || paytmnumber.equalsIgnoreCase("null")){
+                            txt_add_paytm.setText("+Add paytm");
+                        }else {
+                            tv_paytmnumber.setVisibility(View.VISIBLE);
+                            txt_add_paytm.setVisibility(View.VISIBLE);
+                            txt_add_paytm.setTextColor(ContextCompat.getColor(ProfileActivity.this, R.color.black));
+                            txt_add_paytm.setText(paytmnumber);
+                            tie_paytm.setText(paytmnumber);
+                        }
+                        if(holdername.isEmpty() || holdername.equalsIgnoreCase("null")){
+                            txt_add_account.setText("+Add account");
+                        }else {
+                            tv_accountnumber.setVisibility(View.VISIBLE);
+                            txt_add_account.setVisibility(View.VISIBLE);
+                            txt_add_account.setTextColor(ContextCompat.getColor(ProfileActivity.this, R.color.black));
+                            txt_add_account.setText(accountnumber);
+                            bank_name_ev.setText(bankname);
+                            bank_ifsc_ev.setText(ifsc);
+                            account_number_ev.setText(accountnumber);
+                            account_holder_name_ev.setText(holdername);
+                        }
+
+                    }
+
+
+            }
+
         } catch (Exception e) {
 
         }
@@ -483,7 +657,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         ib_profile.setVisibility(View.VISIBLE);
 
-
+        txt_add_upi.setVisibility(View.VISIBLE);
+        txt_add_paytm.setVisibility(View.VISIBLE);
+        txt_add_account.setVisibility(View.VISIBLE);
         ib_profile.setClickable(true);
         ivProfile.setClickable(true);
         tv_state_name.setEnabled(true);
@@ -514,7 +690,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         editButton.setVisibility(View.VISIBLE);
         submit.setVisibility(View.GONE);
         ib_profile.setVisibility(View.GONE);
-
+        txt_add_upi.setVisibility(View.GONE);
+        txt_add_paytm.setVisibility(View.GONE);
+        txt_add_account.setVisibility(View.GONE);
         Log.d("Hide", "hide");
 
         ib_profile.setClickable(false);
@@ -543,4 +721,65 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     }
 
 
+    private void saveAccountPayUpiDetails(String accountHoldername, String bankName, String ifsc, String accountNumber, String accounttype,String up_number, String paytmnumber){
+
+        try {
+            NetworkConn networkConn = NetworkConn.getInstance(this);
+
+
+            HashMap<String, String> hashMap = new HashMap<>();
+            hashMap.put(AppConstants.KEY_HOLDER_NAME, accountHoldername);
+            hashMap.put(AppConstants.KEY_BANK_NAME, bankName);
+            hashMap.put(AppConstants.KEY_IFSC, ifsc);
+            hashMap.put(AppConstants.KEY_ACCOUNT_NUMBER, accountNumber);
+            hashMap.put(AppConstants.KEY_ACCOUNTTYPE, accounttype);
+            hashMap.put(AppConstants.KEY_UP_NUMBER, up_number);
+            hashMap.put(AppConstants.KEY_PAYTM_NUMBER, paytmnumber);
+            //  hashMap.put(AppConstants.KEY_USER_ID, AppPreference.loadStringPref(Request_cashout_Activity.this, KEY_USER_ID));
+
+            // Log.e("RequestCashout", "RequestCashout: " + AppConstants. + "  :: " + hashMap.toString());
+
+            networkConn.makeRequest(this, networkConn.createFormDataRequest(AppConstants.SAVE_DRIVER_ACCOUNT_DETAILS, hashMap,1), this, AppConstants.EVENT_SAVE_DRIVER_ACCOUNT_DETAILS);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    private void fetchAccountDetails(){
+
+        try {
+            NetworkConn networkConn = NetworkConn.getInstance(this);
+
+
+            HashMap<String, String> hashMap = new HashMap<>();
+            hashMap.put("any","");
+            //  hashMap.put(AppConstants.KEY_USER_ID, AppPreference.loadStringPref(Request_cashout_Activity.this, KEY_USER_ID));
+
+            // Log.e("RequestCashout", "RequestCashout: " + AppConstants. + "  :: " + hashMap.toString());
+
+            networkConn.makeRequest(this, networkConn.createRawDataRequest(AppConstants.GET_DRIVER_ACCOUNT_DETAILS, ""), this, AppConstants.EVENT_GET_DRIVER_ACCOUNT_DETAILS);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+    @Override
+    public void onBackPressed() {
+
+        if (ll_account.getVisibility() == View.VISIBLE){
+
+            ll_account.setVisibility(View.GONE);
+
+        }else {
+            super.onBackPressed();
+        }
+
+    }
 }

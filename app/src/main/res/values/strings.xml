@@ -291,7 +291,7 @@
     <string name="driver_as_a_outstation">Driver as a Outstation</string>
     <string name="select_service">Select service</string>
     <string name="please_select_at_least_one_service">Please select at least one service</string>
-
+    <string name="please_select_terms_and_con">Please select terms and conditions</string>
     <string name="location_updated">Location Updated: %1$s</string>
 
     <string name="pickup">Pickup</string>
@@ -363,5 +363,11 @@
     <string name="total_charges">Total Charges :</string>
 
     <string name="country_code">+91</string>
+    <string name="add_account">+ Add account</string>
+    <string name="add_paytm">+ Add paytm</string>
+    <string name="add_upi">+ Add upi</string>
+    <string name="account_number">Account number</string>
+    <string name="upi_number">upi number</string>
+    <string name="paytm_num">paytm number</string>
 
 </resources>

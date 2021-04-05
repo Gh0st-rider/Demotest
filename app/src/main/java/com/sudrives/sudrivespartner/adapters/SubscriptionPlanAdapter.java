@@ -26,7 +26,7 @@ import org.w3c.dom.Text;
 import java.util.List;
 
 /**
- * Created by pankaj on 10/30/18.
+ * Created by SHASHANK on 10/30/18.
  */
 
 public class SubscriptionPlanAdapter extends RecyclerView.Adapter<SubscriptionPlanAdapter.ViewHolder> {
@@ -80,7 +80,7 @@ public class SubscriptionPlanAdapter extends RecyclerView.Adapter<SubscriptionPl
             plan_price = view.findViewById(R.id.plan_price);
             discount = view.findViewById(R.id.discount);
             const1 = view.findViewById(R.id.const1);
-            const1.setOnClickListener(this);
+            itemView.setOnClickListener(this);
         }
 
         @Override
@@ -88,10 +88,6 @@ public class SubscriptionPlanAdapter extends RecyclerView.Adapter<SubscriptionPl
 
             final Result ResultResult = values.get(getAdapterPosition());
 
-
-            const1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
                     Intent i = new Intent(mContext, BuySubscriptionActivity.class);
                     i.putExtra("id",ResultResult.getId().toString());
                     i.putExtra("name",ResultResult.getPlanName());
@@ -99,8 +95,7 @@ public class SubscriptionPlanAdapter extends RecyclerView.Adapter<SubscriptionPl
                     i.putExtra("val", ResultResult.getValidity());
                     i.putExtra("price",ResultResult.getPrice().toString());
                     mContext.startActivity(i);
-                }
-            });
+
         }
     }
 }

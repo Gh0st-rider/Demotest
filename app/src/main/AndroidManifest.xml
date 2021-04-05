@@ -7,10 +7,7 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
-    <!--
-  <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
-    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -21,7 +18,8 @@
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <permission
         android:name="com.sudrives.sudrivespartner.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
@@ -43,7 +41,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.Request_cashout_Activity"></activity>
+        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.Request_cashout_Activity" />
         <activity android:name=".activities.BuySubscriptionActivity" />
         <activity android:name=".activities.chatmodule.ChatActivity" />
         <activity android:name=".activities.SubscriptionPlanActivity">
@@ -56,7 +55,7 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".activities.PermissionsActivity"/>
+        <activity android:name=".activities.PermissionsActivity" />
         <activity
             android:name=".activities.DocumentsActivity"
             android:screenOrientation="portrait" />

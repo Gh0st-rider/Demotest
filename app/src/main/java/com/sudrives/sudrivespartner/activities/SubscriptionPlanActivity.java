@@ -85,6 +85,7 @@ public class SubscriptionPlanActivity extends AppCompatActivity implements Netwo
                     subscriptionPlansModels.addAll(subscriptionPlansModel.getResult());
                     subscriptionPlanAdapter = new SubscriptionPlanAdapter(subscriptionPlansModels,this);
                     binding.recSubs.setLayoutManager(new LinearLayoutManager(this));
+                    binding.recSubs.setNestedScrollingEnabled(false);
                     binding.recSubs.setAdapter(subscriptionPlanAdapter);
 
                 }

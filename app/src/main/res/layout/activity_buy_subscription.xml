@@ -117,10 +117,36 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/details_plan"
+            app:layout_constraintTop_toBottomOf="@+id/const1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Plan Details: "/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper malesuada proin libero nunc consequat. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Eget arcu dictum varius duis. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Odio tempor orci dapibus ultrices in iaculis nunc. Ornare massa eget egestas purus viverra accumsan in. Quis commodo odio aenean sed adipiscing diam. At tempor commodo ullamcorper a lacus vestibulum. Imperdiet sed euismod nisi porta lorem mollis aliquam ut. Ornare arcu dui vivamus arcu felis bibendum ut tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper malesuada proin libero nunc consequat. "
+
+            app:layout_constraintTop_toBottomOf="@+id/details_plan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
         <View
             android:layout_height="1dp"
             android:layout_width="match_parent"
             android:id="@+id/view1"
+            android:visibility="gone"
             android:background="@color/quantum_grey"
             app:layout_constraintTop_toBottomOf="@+id/const1"
             app:layout_constraintStart_toStartOf="parent"
@@ -134,6 +160,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/const_payment"
+            android:visibility="gone"
             android:layout_marginTop="@dimen/margin_10"
             >
 
@@ -198,12 +225,14 @@
             android:layout_marginTop="@dimen/margin_10"
             android:layout_marginBottom="@dimen/margin_10"
             android:id="@+id/view2"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:id="@+id/ll_razor"
+            android:visibility="gone"
             android:background="?selectableItemBackground"
             app:layout_constraintTop_toBottomOf="@+id/view2"
             app:layout_constraintStart_toStartOf="parent"
@@ -236,6 +265,7 @@
             app:layout_constraintTop_toBottomOf="@+id/ll_razor"
             android:layout_marginBottom="@dimen/margin_10"
             android:id="@+id/view3"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"/>
         <Button
             android:id="@+id/btn_online"
@@ -243,10 +273,11 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:fontFamily="@font/proximanova_regular"
-            android:text="Continue with razorpay"
+            android:text="Proceed to pay"
             android:foreground="?selectableItemBackground"
             android:textColor="@color/white"
             android:textSize="@dimen/text_15"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

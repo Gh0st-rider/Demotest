@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="true"
     tools:context=".activities.Request_cashout_Activity">
 
-
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_55sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cashout"
+        android:orientation="vertical">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         style="@style/AppTheme.AppBarOverlay"
@@ -28,6 +34,13 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        android:layout_width="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <androidx.cardview.widget.CardView
         android:id="@+id/card_ride_earned"
         android:layout_width="match_parent"
@@ -36,7 +49,7 @@
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBar">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout
@@ -70,8 +83,8 @@
 
                 <ImageView
                     android:id="@+id/iv_onlinepicks"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_40sdp"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_cashless_payment" />
 
@@ -85,7 +98,6 @@
                         android:id="@+id/totalOnlinePickup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/margin_10"
                         android:fontFamily="@font/montserrat_semibold"
                         android:text="online: 10"
@@ -125,8 +137,8 @@
 
                 <ImageView
                     android:id="@+id/iv_cash"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_40sdp"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/cash_payment" />
 
@@ -140,7 +152,6 @@
                         android:id="@+id/tv_cashpaickups"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/_7sdp"
                         android:fontFamily="@font/montserrat_semibold"
                         android:gravity="center_horizontal"
@@ -180,8 +191,8 @@
 
                 <ImageView
                     android:id="@+id/iv_earned"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_40sdp"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_price_tag" />
 
@@ -274,10 +285,7 @@
             android:orientation="horizontal"
             android:padding="@dimen/margin_10">
 
-            <CheckBox
-                android:id="@+id/check1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+
 
             <ImageView
                 android:id="@+id/iv_account"
@@ -313,10 +321,7 @@
             android:orientation="horizontal"
             android:padding="@dimen/margin_10">
 
-            <CheckBox
-                android:id="@+id/check2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+
 
             <ImageView
                 android:id="@+id/iv_paytm"
@@ -350,11 +355,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="@dimen/margin_10">
-
-            <CheckBox
-                android:id="@+id/check3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
 
             <ImageView
                 android:id="@+id/iv_upi"
@@ -394,16 +394,20 @@
 
     </LinearLayout>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
     <Button
         android:id="@+id/btn_cashout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_45sdp"
         android:layout_margin="@dimen/margin_10"
         android:background="@drawable/rounded_corner_shape_grey"
         android:enabled="false"
         android:fontFamily="@font/montserrat_semibold"
         android:text="Request cashout"
         android:textAllCaps="false"
+        android:layout_gravity="bottom"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -411,4 +415,4 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

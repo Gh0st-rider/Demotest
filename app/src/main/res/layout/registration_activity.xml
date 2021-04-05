@@ -839,8 +839,28 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/proximanova_regular"
                                 android:text="@string/driver_as_a_outstation" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
 
+                                <CheckBox
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/chk_terms"
+                                    />
 
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/read_terms_con"
+                                    android:text="Terms and conditions"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_11sdp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:layout_gravity="center_vertical"/>
+
+                            </LinearLayout>
                             <Button
                                 android:id="@+id/but_registration"
                                 android:layout_width="match_parent"

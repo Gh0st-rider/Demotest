@@ -80,7 +80,7 @@
     <style name="RatingBar" parent="Theme.AppCompat">
 
         <item name="colorControlNormal">@color/white</item>
-        <item name="colorControlActivated">@color/rating_clr</item>
+        <item name="colorControlActivated">@color/white</item>
         <item name="colorPrimary">@color/white</item>
 
 

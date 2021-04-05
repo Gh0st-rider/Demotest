@@ -110,7 +110,7 @@ public class BuySubscriptionActivity extends AppCompatActivity implements Networ
 
     public void startPayment(final String amount, final String orderId, final String receipt) {
 
-        checkout.setKeyID("rzp_test_TqGtcnfKLvaJSp");
+        checkout.setKeyID("rzp_live_Qo2n35b2sGbJKK");
         /**
          * Instantiate Checkout
          */

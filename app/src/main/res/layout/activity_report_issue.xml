@@ -57,7 +57,7 @@
                         android:layout_height="match_parent"
                         android:id="@+id/iv_notification"
                         android:scaleType="centerInside"
-                        android:src="@drawable/notification"
+                        android:src="@drawable/ic_baseline_notifications_24"
                         android:visibility="visible" />
 
                     <TextView

@@ -37,6 +37,8 @@
     <color name="text_grey">#323642</color>
     <color name="text_grey_trans">#51323642</color>
     <color name="blue_alpha">#9CD9FF</color>
+    <color name="read_notification">#FFFFFF</color>
+    <color name="unread_notification">#959595</color>
 
 
 

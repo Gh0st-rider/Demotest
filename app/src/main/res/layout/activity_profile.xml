@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -104,6 +108,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|center_horizontal"
                         android:layout_marginTop="@dimen/margin_5"
+                        android:layout_marginBottom="@dimen/_10sdp"
                         android:numStars="5"
                         android:rating="5"
                         android:theme="@style/RatingBar" />
@@ -114,6 +119,7 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/margin_10"
+                        android:visibility="gone"
                         android:layout_marginBottom="@dimen/margin_30"
                         android:background="@drawable/donation_background"
                         android:fontFamily="@font/proximanova_regular"
@@ -355,6 +361,7 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
+                            android:visibility="gone"
                             android:background="@color/placeholder" />
 
 
@@ -364,6 +371,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_10"
                             android:layout_marginBottom="@dimen/margin_10"
+                            android:visibility="gone"
                             android:fontFamily="@font/proximanova_regular"
                             android:text="@string/select_service"
                             android:textColor="@color/text_color"
@@ -374,6 +382,7 @@
                             android:id="@+id/cb_driver_as_a_daily"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:visibility="gone"
                             android:fontFamily="@font/proximanova_regular"
                             android:text="@string/driver_as_a_daily" />
 
@@ -381,6 +390,7 @@
                             android:id="@+id/cb_driver_as_a_rental"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:visibility="gone"
                             android:fontFamily="@font/proximanova_regular"
                             android:text="@string/driver_as_a_rental" />
 
@@ -388,10 +398,60 @@
                             android:id="@+id/cb_driver_as_a_outstation"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:visibility="gone"
                             android:fontFamily="@font/proximanova_regular"
                             android:text="@string/driver_as_a_outstation" />
-
-
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_accountnumber"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/account_number"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/add_account"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/blue"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:id="@+id/txt_add_account"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_paytmnumber"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/paytm"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/add_paytm"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/blue"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:id="@+id/txt_add_paytm"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_upinumber"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/upi_number"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/add_upi"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/blue"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:id="@+id/txt_add_upi"/>
                         <Button
                             android:id="@+id/btn_profile_submit"
                             android:layout_width="match_parent"
@@ -445,3 +505,191 @@
     </ScrollView>
 
 </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        android:visibility="gone"
+        android:id="@+id/ll_account"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20">
+
+            <LinearLayout
+                android:id="@+id/account_details_l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/earned_money_rv"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/proximanova_regular"
+                        android:text="Account Details"
+                        android:id="@+id/tv_account_title"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/text_20" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/account_details_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account_details_l"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/account_holder_name_ev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionNext"
+                    android:hint="Account Holder Name" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bank_name_ev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:hint="Bank Name" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bank_ifsc_ev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:hint="Ifsc Code" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/account_number_ev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Account Number" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_paytm"
+                android:orientation="horizontal"
+                android:layout_below="@+id/account_details_view">
+                <ImageView
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:id="@+id/iv_paytm"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/paytm"
+                    android:layout_below="@+id/account_details_view"
+                    />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_below="@+id/account_details_view"
+                    android:id="@+id/til_paytm">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Add Paytm number"
+                        android:background="@null"
+                        android:id="@+id/tie_paytm"
+                        android:inputType="number"
+                        android:textSize="@dimen/text_15"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="#e5e5e5"
+                android:id="@+id/view1"
+                android:layout_below="@+id/ll_paytm"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_upi"
+                android:orientation="horizontal"
+                android:layout_below="@+id/view1">
+                <ImageView
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:id="@+id/iv_upi"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/bhim"
+                    />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:id="@+id/til_upi">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Add Upi number"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:id="@+id/tie_upi"
+                        android:textSize="@dimen/text_15"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="#e5e5e5"
+                android:id="@+id/view2"
+                android:layout_below="@+id/ll_upi"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/save_account_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_30"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:text="Save"
+            android:background="@drawable/rounded_corner_shape_primary"
+            android:layout_marginTop="@dimen/margin_40"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
