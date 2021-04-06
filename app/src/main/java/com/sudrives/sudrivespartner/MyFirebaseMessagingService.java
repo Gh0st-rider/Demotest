@@ -69,7 +69,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 JSONObject jsonObject = new JSONObject(object.get("data"));
                 String type = jsonObject.optString("type");
                 String tripId = jsonObject.optString("tripid");
-
+                String sender_id = jsonObject.optString("sender_id");
                 String text = object.get("text");
                 String title = object.get("title");
 
@@ -102,7 +102,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
                 } else {
 
-                    createNotification(type, title, text, jsonObject);
+                    createNotification(type, title, text, jsonObject,tripId, sender_id);
 
                 }
 
@@ -271,7 +271,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
     @SuppressLint("WrongConstant")
-    public void createNotification(String type, String title, String message, JSONObject jsonObject) {
+    public void createNotification(String type, String title, String message, JSONObject jsonObject, String tripID, String senderID) {
         Intent intent = null;
         Random ran = new Random();
 //        int x = ran.nextInt(6) + 5;
@@ -339,6 +339,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 }else if (type.equalsIgnoreCase("message")){
                     intent = new Intent(this, ChatActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    intent.putExtra("driver_id", senderID);
+                    intent.putExtra("tripID",tripID);
                 } else {
                     intent = new Intent(this, HomeMenuActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
