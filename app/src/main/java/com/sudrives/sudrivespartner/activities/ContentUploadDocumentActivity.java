@@ -53,8 +53,14 @@ public class ContentUploadDocumentActivity extends Activity implements View.OnCl
     private LinearLayout llInsurance;
     private TextView tvInsurance;
     private LinearLayout llPermit;
+    private LinearLayout ll_pollution;
+    private TextView tv_pollution;
+    private LinearLayout ll_road_tax;
+    private TextView tv_road_tax;
+    private LinearLayout ll_adhar;
+    private TextView tv_adhar;
     private TextView tvPermit;
-    private String strVehiclelicensePath = "", strVehicleRCPath = "", strFitness = "", strInsurance = "", strPermit = "";
+    private String strVehiclelicensePath = "", strVehicleRCPath = "", strFitness = "", strInsurance = "", strPermit = "", strAdhar="", strPollution="", strRoadTax="";
     private boolean isDtivingRC = false, isTakePic = true;
     private Intent intent;
     private static final String[] INITIAL_PERMS = {
@@ -67,6 +73,10 @@ public class ContentUploadDocumentActivity extends Activity implements View.OnCl
     private boolean isInsurance;
     private boolean isPermit;
     private boolean isProfile;
+    private boolean isRoadTAx;
+    private boolean isAdhar;
+    private boolean isPollution;
+
     private static final int INITIAL_REQUEST = 222;
     private boolean clickFlage = true;
 
@@ -91,6 +101,14 @@ public class ContentUploadDocumentActivity extends Activity implements View.OnCl
         tvInsurance = (TextView) findViewById(R.id.tv_insurance);
         llPermit = (LinearLayout) findViewById(R.id.ll_permit);
         tvPermit = (TextView) findViewById(R.id.tv_permit);
+        ll_pollution = findViewById(R.id.ll_pollution);
+        tv_pollution = findViewById(R.id.tv_pollution);
+        ll_road_tax = findViewById(R.id.ll_road_tax);
+        tv_road_tax = findViewById(R.id.tv_road_tax);
+        ll_adhar = findViewById(R.id.ll_adhar);
+        tv_adhar = findViewById(R.id.tv_adhar);
+
+
         findViewById(R.id.but_save).setOnClickListener(this);
         findViewById(R.id.but_skip).setOnClickListener(this);
 
@@ -108,6 +126,17 @@ public class ContentUploadDocumentActivity extends Activity implements View.OnCl
 
         llPermit.setOnClickListener(this);
         tvPermit.setOnClickListener(this);
+
+        ll_adhar.setOnClickListener(this);
+        tv_adhar.setOnClickListener(this);
+
+        ll_road_tax.setOnClickListener(this);
+        tv_road_tax.setOnClickListener(this);
+
+        ll_pollution.setOnClickListener(this);
+        tv_pollution.setOnClickListener(this);
+
+
     }
 
 
@@ -181,6 +210,35 @@ public class ContentUploadDocumentActivity extends Activity implements View.OnCl
                 isPermit = true;
                 startCheckPermissions();
                 break;
+
+            case R.id.ll_adhar:
+            case R.id.tv_adhar:
+                CommonUtils.hideKeyboard(this, tv_adhar);
+
+                isAdhar = true;
+                startCheckPermissions();
+                break;
+
+            case R.id.ll_pollution:
+            case R.id.tv_pollution:
+
+                CommonUtils.hideKeyboard(this, tv_pollution);
+
+                isPollution = true;
+                startCheckPermissions();
+
+                break;
+
+            case R.id.ll_road_tax:
+            case R.id.tv_road_tax:
+
+                CommonUtils.hideKeyboard(this, tv_road_tax);
+
+                isRoadTAx = true;
+                startCheckPermissions();
+
+                break;
+
         }
     }
 
@@ -329,6 +387,69 @@ public class ContentUploadDocumentActivity extends Activity implements View.OnCl
                         return;
                     }
 
+                    if (isAdhar) {
+                        isAdhar = false;
+
+                        if (image_picker.checkURI(selectedImageURI)) {
+
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(selectedImageURI);
+                            strAdhar = image_picker.resizeImage(ContentUploadDocumentActivity.this, selectedImageURI);
+                        } else {
+
+                            strAdhar = image_picker.resizeImage(ContentUploadDocumentActivity.this, image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+
+
+                        }
+
+                        tv_adhar.setText(new File(strAdhar).getName());
+                        Log.e("File URI", "strPermit" + strAdhar);
+                        Log.e("File URI", "strPermit" + new File(strAdhar).getName());
+                        return;
+                    }
+
+                    if (isRoadTAx) {
+                        isRoadTAx = false;
+
+                        if (image_picker.checkURI(selectedImageURI)) {
+
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(selectedImageURI);
+                            strRoadTax = image_picker.resizeImage(ContentUploadDocumentActivity.this, selectedImageURI);
+                        } else {
+
+                            strRoadTax = image_picker.resizeImage(ContentUploadDocumentActivity.this, image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+
+
+                        }
+
+                        tv_road_tax.setText(new File(strRoadTax).getName());
+                        Log.e("File URI", "strPermit" + strRoadTax);
+                        Log.e("File URI", "strPermit" + new File(strRoadTax).getName());
+                        return;
+                    }
+
+                    if (isPollution) {
+                        isPollution = false;
+
+                        if (image_picker.checkURI(selectedImageURI)) {
+
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(selectedImageURI);
+                            strPollution = image_picker.resizeImage(ContentUploadDocumentActivity.this, selectedImageURI);
+                        } else {
+
+                            strPollution = image_picker.resizeImage(ContentUploadDocumentActivity.this, image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+
+
+                        }
+
+                        tv_pollution.setText(new File(strPollution).getName());
+                        Log.e("File URI", "strPermit" + strPollution);
+                        Log.e("File URI", "strPermit" + new File(strPollution).getName());
+                        return;
+                    }
+
 
                     if (isDtivingRC) {
 
@@ -461,6 +582,69 @@ public class ContentUploadDocumentActivity extends Activity implements View.OnCl
                             return;
 
 
+                        }
+
+                        if (isAdhar) {
+                            isAdhar = false;
+
+                            if (image_picker.checkURI(selectedImageURI)) {
+
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(selectedImageURI);
+                                strAdhar = image_picker.resizeImage(ContentUploadDocumentActivity.this, selectedImageURI);
+                            } else {
+
+                                strAdhar = image_picker.resizeImage(ContentUploadDocumentActivity.this, image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+
+
+                            }
+
+                            tv_adhar.setText(new File(strAdhar).getName());
+                            Log.e("File URI", "strPermit" + strAdhar);
+                            Log.e("File URI", "strPermit" + new File(strAdhar).getName());
+                            return;
+                        }
+
+                        if (isRoadTAx) {
+                            isRoadTAx = false;
+
+                            if (image_picker.checkURI(selectedImageURI)) {
+
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(selectedImageURI);
+                                strRoadTax = image_picker.resizeImage(ContentUploadDocumentActivity.this, selectedImageURI);
+                            } else {
+
+                                strRoadTax = image_picker.resizeImage(ContentUploadDocumentActivity.this, image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+
+
+                            }
+
+                            tv_road_tax.setText(new File(strRoadTax).getName());
+                            Log.e("File URI", "strPermit" + strRoadTax);
+                            Log.e("File URI", "strPermit" + new File(strRoadTax).getName());
+                            return;
+                        }
+
+                        if (isPollution) {
+                            isPollution = false;
+
+                            if (image_picker.checkURI(selectedImageURI)) {
+
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(selectedImageURI);
+                                strPollution = image_picker.resizeImage(ContentUploadDocumentActivity.this, selectedImageURI);
+                            } else {
+
+                                strPollution = image_picker.resizeImage(ContentUploadDocumentActivity.this, image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+//                            strVehicleRCPath = image_picker.getRealPathFromURI(image_picker.getImageUrlWithAuthority(this, selectedImageURI));
+
+
+                            }
+
+                            tv_pollution.setText(new File(strPollution).getName());
+                            Log.e("File URI", "strPermit" + strPollution);
+                            Log.e("File URI", "strPermit" + new File(strPollution).getName());
+                            return;
                         }
 
                         if (isDtivingRC) {
@@ -603,6 +787,24 @@ public class ContentUploadDocumentActivity extends Activity implements View.OnCl
             return;
         }
 
+        if (strAdhar.trim().equalsIgnoreCase("")) {
+            error.showAlert(getResources().getString(R.string.error_please_upload_adhar), ErrorLayout.MsgType.Error, true);
+            clickFlage = true;
+            return;
+        }
+
+        if (strPollution.trim().equalsIgnoreCase("")) {
+            error.showAlert(getResources().getString(R.string.error_please_upload_pollution), ErrorLayout.MsgType.Error, true);
+            clickFlage = true;
+            return;
+        }
+
+        if (strRoadTax.trim().equalsIgnoreCase("")) {
+            error.showAlert(getResources().getString(R.string.error_please_upload_roadtax), ErrorLayout.MsgType.Error, true);
+            clickFlage = true;
+            return;
+        }
+
         callRegistrationAPI();
 
 
@@ -626,6 +828,9 @@ public class ContentUploadDocumentActivity extends Activity implements View.OnCl
             hashMap.put(AppConstants.KEY_VALUE_FITNESS_CERTIFICATE, strFitness);
             hashMap.put(AppConstants.KEY_VALUE_INSURANCE, strInsurance);
             hashMap.put(AppConstants.KEY_VALUE_PERMIT, strPermit);
+            hashMap.put(AppConstants.KEY_VALUE_ADHAR_CARD, strAdhar);
+            hashMap.put(AppConstants.KEY_VALUE_POLLUTION, strPollution);
+            hashMap.put(AppConstants.KEY_VALUE_ROAD_TAX, strRoadTax);
 
             hashMap.put(AppConstants.KEY_USER_ROLE, "2");
 

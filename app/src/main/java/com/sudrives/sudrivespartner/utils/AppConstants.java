@@ -263,7 +263,9 @@ public class AppConstants {
     public static String KEY_VALUE_ABOUT_US = "hear_us";
     public static String KEY_VALUE_DRIVING_LICENSE_PATH = "driving_license";
     public static String KEY_VALUE_DRIVING_LICENSE_RC_PATH = "rc_number";
-
+    public static String KEY_VALUE_POLLUTION = "pollution";
+    public static String KEY_VALUE_ADHAR_CARD = "aadhar_card";
+    public static String KEY_VALUE_ROAD_TAX = "road_tax";
     public static String KEY_VALUE_FITNESS_CERTIFICATE = "fitness_certificate";
     public static String KEY_VALUE_INSURANCE = "insurance";
     public static String KEY_VALUE_PERMIT = "permit";

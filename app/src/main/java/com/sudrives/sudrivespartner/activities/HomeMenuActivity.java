@@ -77,6 +77,7 @@ import com.sudrives.sudrivespartner.models.AcceptedBookingModel;
 import com.sudrives.sudrivespartner.models.IhaveArrivedAtPickupLocationModel;
 import com.sudrives.sudrivespartner.models.NotificationCountModel;
 import com.sudrives.sudrivespartner.models.ProfileModel;
+import com.sudrives.sudrivespartner.networks.MySMSBroadCastReceiver;
 import com.sudrives.sudrivespartner.networks.NetworkConn;
 import com.sudrives.sudrivespartner.networks.SocketConnection;
 import com.sudrives.sudrivespartner.utils.AppConstants;
@@ -143,6 +144,7 @@ public class HomeMenuActivity extends AppCompatActivity
     private View header;
     private DrawerLayout drawer;
 
+    ConstraintLayout const_subsc;
     Locale myLocale;
     private String notificationTripId = "";
     private String notificationType = "";
@@ -353,6 +355,7 @@ public class HomeMenuActivity extends AppCompatActivity
         }
         getDriverStatus();
         getWalletDetails();
+        disableBroadcastReceiver();
     }
 
 
@@ -461,6 +464,7 @@ public class HomeMenuActivity extends AppCompatActivity
         tv_start_date = header.findViewById(R.id.tv_start_date);
         tv_end_date = header.findViewById(R.id.tv_end_date);
         validity_subs = header.findViewById(R.id.validity_subs);
+        const_subsc = header.findViewById(R.id.const_subsc);
 
         balance_amount = header.findViewById(R.id.balance_amount);
 
@@ -671,7 +675,7 @@ public class HomeMenuActivity extends AppCompatActivity
 
             if (fragment.getFragmentManager().getBackStackEntryCount() > 0) { // and then you define a method allowBackPressed with the logic to allow back pressed or not
                 fragment.getFragmentManager().popBackStack();
-                toolbarTitle.setText(getString(R.string.nav_history));
+                toolbarTitle.setText(getString(R.string.nav_home));
             } else {
                 exitDialog();
 
@@ -1170,6 +1174,30 @@ public class HomeMenuActivity extends AppCompatActivity
         }
     };
 
+
+    public void enableBroadcastReceiver()
+    {
+
+        ComponentName receiver = new ComponentName(this, MySMSBroadCastReceiver.class);
+        PackageManager pm = this.getPackageManager();
+
+        pm.setComponentEnabledSetting(receiver,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP);
+       // Toast.makeText(this, "Enabled broadcast receiver", Toast.LENGTH_SHORT).show();
+    }
+    /**
+     * This method disables the Broadcast receiver registered in the AndroidManifest file.
+     * @param view
+     */
+    public void disableBroadcastReceiver(){
+        ComponentName receiver = new ComponentName(this, MySMSBroadCastReceiver.class);
+        PackageManager pm = this.getPackageManager();
+        pm.setComponentEnabledSetting(receiver,
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                PackageManager.DONT_KILL_APP);
+        //Toast.makeText(this, "Disabled broadcst receiver", Toast.LENGTH_SHORT).show();
+    }
 
     public Emitter.Listener onResponceBookingAccept = new Emitter.Listener() {
         @Override
@@ -2470,7 +2498,7 @@ public class HomeMenuActivity extends AppCompatActivity
                     String startDate = result.getString("subscription_start_date");
                     String endDate = result.getString("subscription_end_date");
                     String planValidity = result.getString("validity");
-
+                    const_subsc.setVisibility(View.VISIBLE);
                     tv_plan_price.setText("Price: "+priceSubs);
                     tv_start_date.setText("Start: "+startDate);
                     tv_end_date.setText("End: "+endDate);

@@ -84,14 +84,14 @@ public class BookingHistoryAdapter extends RecyclerView.Adapter<BookingHistoryAd
         String paymentMode = resultBean.is_online_payment_accept;
 
         if (paymentMode.equalsIgnoreCase("0")) {
-            holder.tv_payment_status.setText("Payment: Paid");
+            holder.tv_payment_status.setText(resultBean.payment_mode);
 
         } else {
 
             if (!TextUtils.isEmpty(paymantStatus)) {
-                holder.tv_payment_status.setText("Payment: Paid");
+                holder.tv_payment_status.setText(resultBean.payment_mode);
             } else {
-                holder.tv_payment_status.setText("Payment: Pending");
+                holder.tv_payment_status.setText(resultBean.payment_mode);
 
             }
         }

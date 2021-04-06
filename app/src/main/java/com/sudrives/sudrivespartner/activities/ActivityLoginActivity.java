@@ -3,6 +3,7 @@ package com.sudrives.sudrivespartner.activities;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -14,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.os.CountDownTimer;
 import android.text.Html;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -36,6 +38,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.sudrives.sudrivespartner.R;
+import com.sudrives.sudrivespartner.networks.MySMSBroadCastReceiver;
 import com.sudrives.sudrivespartner.networks.NetworkConn;
 import com.sudrives.sudrivespartner.utils.AppConstants;
 import com.sudrives.sudrivespartner.utils.AppPreference;
@@ -106,7 +109,7 @@ public class ActivityLoginActivity extends Activity implements View.OnClickListe
         getFireBaseTokenId();
 
         init();
-
+        enableBroadcastReceiver();
         // makeTermsLink();
 
         //  errorLayout = (include) findViewById(R.id.error_layout);
@@ -123,7 +126,17 @@ public class ActivityLoginActivity extends Activity implements View.OnClickListe
         setValue();
 
     }
+    public void enableBroadcastReceiver()
+    {
 
+        ComponentName receiver = new ComponentName(this, MySMSBroadCastReceiver.class);
+        PackageManager pm = this.getPackageManager();
+
+        pm.setComponentEnabledSetting(receiver,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP);
+        // Toast.makeText(this, "Enabled broadcast receiver", Toast.LENGTH_SHORT).show();
+    }
 
     private void setValue() {
 

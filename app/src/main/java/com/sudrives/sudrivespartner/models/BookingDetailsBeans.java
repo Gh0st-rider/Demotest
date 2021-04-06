@@ -67,6 +67,7 @@ public class BookingDetailsBeans {
         public String vehicle_name;
         public String vehicle_img;
         public String is_online_payment_accept;
+        public String payment_mode;
         public String create_dt;
         public String eta;
         public String total_fare;

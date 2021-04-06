@@ -41,6 +41,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 
+import static com.sudrives.sudrivespartner.utils.AppConstants.EVENT_GET_DRIVER_ACCOUNT_DETAILS;
 import static com.sudrives.sudrivespartner.utils.AppConstants.KEY_ACCOUNT_ID;
 import static com.sudrives.sudrivespartner.utils.AppConstants.KEY_ACCOUNT_NUMBER;
 import static com.sudrives.sudrivespartner.utils.AppConstants.KEY_AMOUNT;
@@ -178,7 +179,7 @@ public class NetworkConn {
                                 AppDialogs.sessionPopPup(mContext);
 
 
-                            } else if (errorCode == 0 || errorCode == 1) {
+                            } else if ((errorCode == 0 || errorCode == 1) && !strEventType.equalsIgnoreCase(EVENT_GET_DRIVER_ACCOUNT_DETAILS)) {
                                 AppDialogs.errorPopup(mContext, message, null);
 
                             } else if (errorCode == 225 || errorCode == 236) {
@@ -796,6 +797,33 @@ public class NetworkConn {
                 body.addFormDataPart(AppConstants.KEY_VALUE_PERMIT, params.get(AppConstants.KEY_VALUE_PERMIT));
             } else {
                 body.addFormDataPart(AppConstants.KEY_VALUE_PERMIT, "permit.png", RequestBody.create(MEDIA_TYPE_PNG, new File(params.get(AppConstants.KEY_VALUE_PERMIT))));
+            }
+        }
+
+        if (params.containsKey(AppConstants.KEY_VALUE_ROAD_TAX)) {
+            if (fileType == 0) {
+
+                body.addFormDataPart(AppConstants.KEY_VALUE_ROAD_TAX, params.get(AppConstants.KEY_VALUE_ROAD_TAX));
+            } else {
+                body.addFormDataPart(AppConstants.KEY_VALUE_ROAD_TAX, "roadtax.png", RequestBody.create(MEDIA_TYPE_PNG, new File(params.get(AppConstants.KEY_VALUE_ROAD_TAX))));
+            }
+        }
+
+        if (params.containsKey(AppConstants.KEY_VALUE_ADHAR_CARD)) {
+            if (fileType == 0) {
+
+                body.addFormDataPart(AppConstants.KEY_VALUE_ADHAR_CARD, params.get(AppConstants.KEY_VALUE_ADHAR_CARD));
+            } else {
+                body.addFormDataPart(AppConstants.KEY_VALUE_ADHAR_CARD, "roadtax.png", RequestBody.create(MEDIA_TYPE_PNG, new File(params.get(AppConstants.KEY_VALUE_ADHAR_CARD))));
+            }
+        }
+
+        if (params.containsKey(AppConstants.KEY_VALUE_POLLUTION)) {
+            if (fileType == 0) {
+
+                body.addFormDataPart(AppConstants.KEY_VALUE_POLLUTION, params.get(AppConstants.KEY_VALUE_POLLUTION));
+            } else {
+                body.addFormDataPart(AppConstants.KEY_VALUE_POLLUTION, "pollution.png", RequestBody.create(MEDIA_TYPE_PNG, new File(params.get(AppConstants.KEY_VALUE_POLLUTION))));
             }
         }
 

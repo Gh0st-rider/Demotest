@@ -303,6 +303,10 @@
     <string name="error_please_upload_fitness">Please Upload Fitness Certificate</string>
     <string name="error_please_upload_insurance">Please upload Insurance</string>
     <string name="error_please_upload_permit">Please upload Permit copy</string>
+    <string name="error_please_upload_adhar">Please upload Adhar copy</string>
+    <string name="error_please_upload_pollution">Please upload Pollution copy</string>
+    <string name="error_please_upload_roadtax">Please upload Road Tax copy</string>
+
     <string name="error_please_upload_profile">Please upload profile picture</string>
     <string name="current">current</string>
     <string name="estimated_trip_amount">estimated trip amount</string>

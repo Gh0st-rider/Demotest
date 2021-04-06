@@ -50,6 +50,7 @@
                     android:layout_height="?android:attr/actionBarSize"
                     android:layout_alignParentRight="true"
                     android:layout_gravity="right"
+                    android:visibility="gone"
                     android:gravity="center">
 
                     <ImageView

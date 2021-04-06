@@ -207,7 +207,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
 
      AlertDialog alertDialog3;
     TextView bookings;
-
+    SupportMapFragment mapFragment;
 
 
     @Override
@@ -248,7 +248,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
+        mapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.map);
         mapView = mapFragment.getView();
         mapFragment.getMapAsync(this);
@@ -624,6 +624,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
 
             TypedValue tv = new TypedValue();
             int actionBarHeight;
+
             if (getActivity().getTheme().resolveAttribute(R.attr.actionBarSize, tv, true)) {
                 actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
 
@@ -900,6 +901,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
 
                 Intent i = new Intent(getActivity(), ChatActivity.class);
                 i.putExtra("driver_id",userID);
+                i.putExtra("tripID", endTripId);
                 startActivity(i);
 
                 break;
@@ -1064,7 +1066,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
             jProfileDate.put(AppConstants.KEY_TOKEN, AppPreference.loadStringPref(getActivity(), AppPreference.KEY_TOKEN));
             jProfileDate.put(AppConstants.KEY_LANGUAGE, AppPreference.loadStringPref(getActivity(), AppPreference.KEY_LANGUAGE));
             jProfileDate.put(AppConstants.KEY_TRIPID, mIhaveArrivedAtPickupLocationModel.getResult().getId());
-
+            endTripId = mIhaveArrivedAtPickupLocationModel.getResult().getId();
             jProfileDate.put(AppConstants.KEY_TYPE_FOR, AppConstants.KEY_VALUE_DRIVER);
             jProfileDate.put(AppConstants.KEY_LAT, curentLocation.latitude);
             jProfileDate.put(AppConstants.KEY_LANG, curentLocation.longitude);
@@ -1104,7 +1106,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
             jProfileDate.put(AppConstants.KEY_TOKEN, AppPreference.loadStringPref(getActivity(), AppPreference.KEY_TOKEN));
             jProfileDate.put(AppConstants.KEY_LANGUAGE, AppPreference.loadStringPref(getActivity(), AppPreference.KEY_LANGUAGE));
             jProfileDate.put(AppConstants.KEY_TRIPID, mIhaveArrivedAtPickupLocationModel.getResult().getId());
-
+            endTripId = mIhaveArrivedAtPickupLocationModel.getResult().getId();
             jProfileDate.put(AppConstants.KEY_TYPE_FOR, AppConstants.KEY_VALUE_DRIVER);
             jProfileDate.put(AppConstants.KEY_LAT, curentLocation.latitude);
             jProfileDate.put(AppConstants.KEY_LANG, curentLocation.longitude);
@@ -1196,7 +1198,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
 
 
             jProfileDate.put(AppConstants.KEY_TRIPID, tripId);
-
+            endTripId = tripId;
 
             jProfileDate.put(AppConstants.KEY_STATUS, status);
 
@@ -1234,6 +1236,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
             jProfileDate.put(AppConstants.KEY_TOKEN, AppPreference.loadStringPref(getActivity(), AppPreference.KEY_TOKEN));
             jProfileDate.put(AppConstants.KEY_LANGUAGE, AppPreference.loadStringPref(getActivity(), AppPreference.KEY_LANGUAGE));
             jProfileDate.put(AppConstants.KEY_TRIPID, mAcceptedBookingModel.getResult().getBooking_info().getId());
+            endTripId = mAcceptedBookingModel.getResult().getBooking_info().getId();
             jProfileDate.put(AppConstants.KEY_TYPE_FOR, "driver");
             jProfileDate.put(AppConstants.KEY_CANCEL_ORDER_ID, id);
             jProfileDate.put(AppConstants.KEY_CANCEL_MSG, comment);
@@ -1333,6 +1336,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
             jProfileDate.put(AppConstants.KEY_TOKEN, AppPreference.loadStringPref(getActivity(), AppPreference.KEY_TOKEN));
             jProfileDate.put(AppConstants.KEY_LANGUAGE, AppPreference.loadStringPref(getActivity(), AppPreference.KEY_LANGUAGE));
             jProfileDate.put(AppConstants.KEY_TRIPID, mEndTripModel.getResult().getId());
+            endTripId = mEndTripModel.getResult().getId();
             jProfileDate.put(AppConstants.KEY_RATING_VOTE, rating);
             jProfileDate.put(AppConstants.KEY_COMMENT, comment);
             Log.e(TAG, "emmitUserRationg: " + jProfileDate.toString());
@@ -1364,6 +1368,36 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, View.O
                         Log.e("dfg", "onSuccessfullGetResponse: " + loginModel.getResult().getDriver_trip_status());
 
                         if (loginModel.getResult().getDriver_trip_status() == 0) {
+                            mapFragment = (SupportMapFragment) getChildFragmentManager()
+                                    .findFragmentById(R.id.map);
+                            mapView = mapFragment.getView();
+                            mapFragment.getMapAsync(new OnMapReadyCallback() {
+                                @Override
+                                public void onMapReady(GoogleMap googleMap) {
+                                    //googleMap.setMapStyle(R.raw.uber_style);
+                                    googleMap.setMapStyle(
+                                            MapStyleOptions.loadRawResourceStyle(
+                                                    getActivity(), R.raw.uber_style));
+                                    googleMap.getUiSettings().setZoomControlsEnabled(false);
+                                    googleMap.getUiSettings().setScrollGesturesEnabled(true);
+
+                                    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mCenterLatLong, 14.0f));
+                                    // Creating a marker
+                                    //MarkerOptions markerOptions = new MarkerOptions();
+
+                                    // Setting the position for the marker
+                                    //markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.pin1));
+                                    //markerOptions.position(destination);
+                                    //googleMap.addMarker(markerOptions);
+
+                                }
+                            });
+                            if (AppDialogs.dialog != null){
+                                AppDialogs.dialog.dismiss();
+
+
+
+                            }
                             setDriverInfo(loginModel);
 
                         } else {

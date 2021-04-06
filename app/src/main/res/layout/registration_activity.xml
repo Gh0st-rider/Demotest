@@ -335,7 +335,6 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/cb_sedan"
                                         android:visibility="gone"
-
                                         android:layout_marginStart="@dimen/margin_10"
                                         android:layout_marginEnd="@dimen/margin_10"
                                         app:layout_constraintTop_toTopOf="parent"

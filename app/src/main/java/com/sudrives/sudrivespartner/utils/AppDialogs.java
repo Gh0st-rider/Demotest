@@ -57,7 +57,7 @@ public class AppDialogs {
     LinearLayout ll_accept_popup_cross, ll_acceptPopup;
 
     TextView tv_accept_popup_timeCount, tv_accept_popup_pickupLocation, tv_accept_popup_dropLocation, tv_accept_popup_userName, tv_accept_popup_time, tv_accept_popup_collect;
-
+    Dialog dialog1;
 
     public AppDialogs(Context context) {
 
@@ -388,7 +388,7 @@ public class AppDialogs {
                 et_ET_enter_OTP = view.findViewById(R.id.et_ET_enter_OTP);
                 btn_ET_submit = view.findViewById(R.id.btn_ET_submit);
 
-                final Dialog dialog = new Dialog(mContext);
+                dialog = new Dialog(mContext);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(view);
                 dialog.setCancelable(false);
@@ -428,6 +428,10 @@ public class AppDialogs {
 
 
     }//End...
+
+    public static void dismissPopup(final Context mContext){
+        dialog.dismiss();
+    }
 
     public static void fareSummeryPopup(final Context mContext, final String price, final String distance, final String tripId,final String paymentMode, final OnOKButtonListener listener, final iOnDonateListner iOnDonateListner) {
 

@@ -10,7 +10,10 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.app.Activity;
 
+import androidx.core.content.ContextCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
@@ -45,12 +48,12 @@ public class ActivityVerificationActivity extends Activity implements View.OnCli
 
     private RelativeLayout rlMain;
     private LinearLayout llMobileNo;
-    private TextView tvResendOtp;
+    private TextView tvResendOtp, tv_resendOtpTimer;
     private TextView tvVerificationMobileNo;
     private Intent intent;
     private boolean clickFlage = true;
 
-
+    CountDownTimer countDownTimer;
     private EditText frstotp, secondotp, thirdotp, fourthotp;
 
     @Override
@@ -72,7 +75,7 @@ public class ActivityVerificationActivity extends Activity implements View.OnCli
 
         rlMain = findViewById(R.id.rlMain);
         llMobileNo = findViewById(R.id.ll_mobile_no);
-
+        tv_resendOtpTimer = findViewById(R.id.tv_resendOtpTimer);
         tvResendOtp = findViewById(R.id.tv_resendOtp);
         tvVerificationMobileNo = findViewById(R.id.tv_verification_mobileNo);
         tvVerificationMobileNo = findViewById(R.id.tv_verification_mobileNo);
@@ -195,6 +198,20 @@ public class ActivityVerificationActivity extends Activity implements View.OnCli
 
 
         setValue();
+
+        countDownTimer = new CountDownTimer(60000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                tv_resendOtpTimer.setText("Resend in: " + millisUntilFinished / 1000);
+                //here you can have your logic to set text to edittext
+            }
+
+            public void onFinish() {
+                tvResendOtp.setEnabled(true);
+                tvResendOtp.setTextColor(ContextCompat.getColor(ActivityVerificationActivity.this, R.color.black));
+            }
+
+        }.start();
 
     }
 
@@ -711,6 +728,11 @@ public class ActivityVerificationActivity extends Activity implements View.OnCli
             }
         }
     };
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 }
 
 

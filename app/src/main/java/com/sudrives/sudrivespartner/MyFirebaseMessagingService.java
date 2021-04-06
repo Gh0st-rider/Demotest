@@ -25,6 +25,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import com.google.gson.Gson;
 import com.sudrives.sudrivespartner.activities.HomeMenuActivity;
 import com.sudrives.sudrivespartner.activities.ReportIssueSummary;
+import com.sudrives.sudrivespartner.activities.chatmodule.ChatActivity;
 import com.sudrives.sudrivespartner.models.ReportNotificationModel;
 import com.sudrives.sudrivespartner.utils.AppConstants;
 import com.sudrives.sudrivespartner.utils.AppPreference;
@@ -335,9 +336,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
                     intent.putExtra("Type", type);
+                }else if (type.equalsIgnoreCase("message")){
+                    intent = new Intent(this, ChatActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 } else {
                     intent = new Intent(this, HomeMenuActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
                     intent.putExtra("Type", type);
                 }
 

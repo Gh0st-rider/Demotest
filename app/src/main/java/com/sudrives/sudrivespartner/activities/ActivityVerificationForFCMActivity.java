@@ -608,7 +608,7 @@ public class ActivityVerificationForFCMActivity extends Activity implements View
 
     @Override
     public void onResponse(JSONObject response, String strEventType) {
-        Log.e("Response", "Response: " + response);
+        Log.e("LoginResponse", "Response: " + response);
         clickFlage = true;
         try {
 
@@ -897,6 +897,11 @@ public class ActivityVerificationForFCMActivity extends Activity implements View
             }
         }
     };*/
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 }
 
 
